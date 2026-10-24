@@ -690,8 +690,8 @@ h1[tabindex="-1"]:focus{outline:none}
 
 /* 05 ON AIR */
 .cv-onair{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
-.cv-onair__txt{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px clamp(28px,4vw,56px);align-items:center;color:var(--ink-2);font-size:15.5px;line-height:1.7}
-.cv-onair__q{padding-left:clamp(20px,3vw,40px);border-left:1px solid var(--line);font-size:18px;font-weight:800;letter-spacing:-.03em;line-height:1.5;color:var(--ink)}
+.cv-onair__txt{grid-column:1/-1;color:var(--ink-2);font-size:15.5px;line-height:1.7}
+.cv-onair__txt p{max-width:56em}
 
 /* 06 관심사원 · B봇 */
 .cv-gw{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:16px;align-items:start}
@@ -734,8 +734,6 @@ h1[tabindex="-1"]:focus{outline:none}
 .cv-dream__cut{width:100%;height:auto;align-self:end;margin-top:clamp(36px,5vw,76px)}
 
 @media (max-width:1100px){
-  .cv-onair__txt{grid-template-columns:minmax(0,1fr)}
-  .cv-onair__q{padding:16px 0 0;border-left:0;border-top:1px solid var(--line)}
   .cv-anat{grid-template-columns:minmax(0,1fr) clamp(200px,30%,280px) minmax(0,1fr)}
 }
 /* below 1180 the glass card would reach the crew, so it drops under the photo */
@@ -749,9 +747,10 @@ h1[tabindex="-1"]:focus{outline:none}
   .cv-hero__fig{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:clamp(28px,6vw,40px)}
   .cv-intro,.cv-gw{grid-template-columns:minmax(0,1fr)}
   /* the timeline cut-out stands behind the top of the panel, so its lower half never meets the steps */
-  .cv-tl{grid-template-columns:minmax(0,1fr)}
-  .cv-tl__fig{grid-row:1;justify-self:end;width:clamp(150px,27vw,220px);margin:0 clamp(12px,5vw,56px) calc(-1 * clamp(150px,31vw,250px)) 0;z-index:0}
-  .cv-tl__panel{grid-row:2;margin-right:0;padding-right:clamp(22px,3.6vw,52px)}
+  /* stacked, the cut-out only adds height above the panel, so it goes */
+  .cv-tl{grid-template-columns:minmax(0,1fr);margin-top:0}
+  .cv-tl__fig{display:none}
+  .cv-tl__panel{margin-right:0;padding-right:clamp(22px,3.6vw,52px)}
     }
 @media (max-width:760px){
   /* phones: one still is enough */
@@ -1877,7 +1876,6 @@ h1[tabindex="-1"]:focus{outline:none}
       <div class="cv-onair">
         <div class="card cv-onair__txt rv">
           <p>펭수 초창기 홍대 공연을 함께한 인연으로 요들랜드 팀이 MBC 〈마이 리틀 텔레비전〉에 나갔고, 저는 촬영장 비하인드를 찍었습니다. 개그맨과의 콜라보 방송, 아프리카TV 도아TV 합방도 이어졌습니다.</p>
-          <p class="cv-onair__q">섭외 연락은 PD인 제가 받았지만, 무대의 주인공은 뛰어난 선생님들이었습니다.</p>
         </div>
         <figure class="rv"><div class="media" style="aspect-ratio:4/3"><img src="assets/img/yd-hongdae.webp" alt="홍대 거리 공연을 마치고 펭수, 요들 선생님들, 전통의상을 입은 어린이 단원들과 함께 선 이홍연. 어린이 얼굴은 흐리게 처리" width="960" height="720" loading="lazy"></div><figcaption class="cap">EBS 펭수와 홍대 공연 · 2019</figcaption></figure>
         <figure class="rv"><a class="media golink" style="aspect-ratio:4/3" href="https://www.youtube.com/watch?v=fOAehDdIusk" target="_blank" rel="noopener" aria-label="마리텔 촬영장 비하인드 영상 새 창으로 보기"><img src="assets/img/yd-maritel.webp" alt="MBC 마이리틀텔레비전 촬영 현장에서 크리에이터 도티와 손을 흔드는 이홍연" width="1400" height="944" loading="lazy"><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>영상 보기</span></a><figcaption class="cap">MBC 〈마이 리틀 텔레비전〉 촬영장 비하인드 · 2019</figcaption></figure>
