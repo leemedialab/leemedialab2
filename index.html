@@ -854,6 +854,7 @@ h1[tabindex="-1"]:focus{outline:none}
 .award__big{font-size:clamp(44px,4.6vw,64px);font-weight:800;letter-spacing:-.05em;line-height:1}
 .award p{font-size:15px;line-height:1.65;color:#fff}
 .award__fig{width:100%;height:auto;margin-top:14px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.35))}
+.cv-award{max-width:640px;margin-bottom:clamp(24px,3vw,40px)}  /* creator tab, chapter 05: sits under the heading */
 
 /* Yonsei */
 /* Yonsei research: a feature spread. One lead (01) with a large cover and a colophon, two shorter items (02, 03) below.
@@ -1477,14 +1478,6 @@ h1[tabindex="-1"]:focus{outline:none}
             <img class="quote__bg" src="assets/img/pd-award.webp" alt="" width="1400" height="757" loading="lazy">
             <span class="quote__foot"><cite>《B tv 이동진의 파이아키아》 채널 수상 · 메트로신문 2024.01.21</cite></span>
           </a>
-          <div class="card award rv">
-            <div class="award__txt">
-              <span class="award__k"><svg class="ic" aria-hidden="true"><use href="#i-award"/></svg>SK그룹 toktokTV · 2020.11</span>
-              <b class="award__big">대상</b>
-              <p>'Best Creator를 찾아라' 공모전. 인간형 IPTV 캐릭터 'B봇'을 기획하고 만들어 SK브로드밴드와 SK그룹의 역사를 5분씩 풀어냈습니다.</p>
-            </div>
-            <img class="award__fig" src="assets/img/pd-bbot.webp" alt="TV 머리에 흰 수트를 입은 캐릭터 B봇이 댑 포즈를 취한 모습" width="536" height="1000" loading="lazy">
-          </div>
         </div>
       </div>
     </div>
@@ -1870,7 +1863,15 @@ h1[tabindex="-1"]:focus{outline:none}
 
     <!-- 05 B-BOT: the company comedy pilot and the character he built -->
     <div class="block" id="yd-gwansim">
-      <div class="cv-head rv"><p class="cv-head__k"><b>05</b></p><h2>'관심사원'과 세계 최초 인간형 IPTV 'B봇'</h2><p>2020 · 회사 유튜브 예능 기획 · 채널 공개는 코로나19로 보류</p></div>
+      <div class="cv-head rv"><p class="cv-head__k"><b>05</b></p><h2>'관심사원'과 세계 최초 인간형 IPTV 'B봇'</h2><p>직접 기획하고 만든 캐릭터 'B봇'으로 SK그룹 영상 공모전 대상을 받았습니다.</p><p>2020 · 회사 유튜브 예능 기획 · 채널 공개는 코로나19로 보류</p></div>
+      <div class="card award cv-award rv">
+        <div class="award__txt">
+          <span class="award__k"><svg class="ic" aria-hidden="true"><use href="#i-award"/></svg>SK그룹 toktokTV · 2020.11</span>
+          <b class="award__big">대상</b>
+          <p>'Best Creator를 찾아라' 공모전. 인간형 IPTV 캐릭터 'B봇'을 기획하고 만들어 SK브로드밴드와 SK그룹의 역사를 5분씩 풀어냈습니다.</p>
+        </div>
+        <img class="award__fig" src="assets/img/pd-bbot.webp" alt="TV 머리에 흰 수트를 입은 캐릭터 B봇이 댑 포즈를 취한 모습" width="536" height="1000" loading="lazy">
+      </div>
       <div class="cv-gw">
         <div class="card cv-gw__intro rv">
           <img class="cv-gw__icon" src="assets/img/cv/gwansim-icon.webp" alt="관심사원 채널 아이콘: 관심사원 로고 옆에서 사원증을 건 셔츠 차림으로 웃는 이홍연" width="480" height="480" loading="lazy">
