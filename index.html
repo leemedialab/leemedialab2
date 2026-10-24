@@ -696,16 +696,6 @@ h1[tabindex="-1"]:focus{outline:none}
 .cv-steps b{display:flex;align-items:center;gap:7px;font-size:16px;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
 .cv-steps b i{font-style:normal;font-size:11.5px;font-weight:800;padding:3px 8px;border-radius:999px;background:var(--accent-fill);color:#fff;font-variant-numeric:tabular-nums}
 .cv-steps span{font-size:15px;color:var(--ink-2);line-height:1.6}
-/* the finished M/V and where it stands now */
-.cv-mv{display:grid;grid-template-columns:clamp(150px,24%,260px) minmax(0,1fr);gap:clamp(16px,2.6vw,32px);align-items:center;margin-top:clamp(44px,5vw,64px);padding:12px;padding-right:clamp(16px,2.6vw,32px);
-  border-radius:var(--r-lg);background:var(--card);border:1px solid var(--line);text-decoration:none;transition:border-color .2s,transform .35s var(--ease),box-shadow .35s var(--ease)}
-.cv-mv:hover{border-color:var(--line-2);transform:translateY(-2px);box-shadow:var(--shadow)}
-.cv-mv__th{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:var(--bg-3)}
-.cv-mv__th img{width:100%;height:100%;object-fit:cover}
-.cv-mv__txt{display:grid;gap:6px;min-width:0}
-.cv-mv__txt em{font-style:normal;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent-ink)}
-.cv-mv__txt b{font-size:clamp(17px,1.7vw,22px);font-weight:800;letter-spacing:-.035em;line-height:1.4}
-.cv-mv__txt small{font-size:13px;color:var(--ink-3);line-height:1.5}
 
 /* 05 ON AIR */
 .cv-onair{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
@@ -807,8 +797,6 @@ h1[tabindex="-1"]:focus{outline:none}
   .cv-steps li:first-child::before,.cv-steps li:last-child::before{width:34px;height:34px;font-size:9.5px}
   .cv-steps li:not(:last-child)::after{left:46px}
   .cv-steps span{grid-column:2;font-size:14.5px}
-  .cv-mv{grid-template-columns:minmax(0,1fr);padding-right:12px}
-  .cv-mv__txt{padding:4px 6px 8px}
   .cv-anat{grid-template-columns:minmax(0,1fr)}
       }
 /* home card 01: the five fields as a woven media stack (inline SVG) */
@@ -1907,10 +1895,6 @@ h1[tabindex="-1"]:focus{outline:none}
           <img src="assets/img/cv/timeline-autoharp.webp" alt="파란 요들 의상을 입고 크로마하프를 품에 안은 채 서 있는 이홍연" width="442" height="1200" loading="lazy">
         </figure>
       </div>
-      <a class="cv-mv golink rv" href="https://www.youtube.com/watch?v=VfvDleW2m8s" target="_blank" rel="noopener" aria-label="요들송 M/V 새 창으로 보기">
-        <span class="cv-mv__th"><img src="assets/img/yt/VfvDleW2m8s.webp" alt="요들송 M/V 썸네일" width="640" height="360" loading="lazy"><span class="yt__len">2:44</span><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>영상 보기</span></span>
-        <span class="cv-mv__txt"><b>이렇게 만든 M/V는 조회수 15만 회를 넘겼고, 지금은 21만 회입니다</b><small>15만+: 웹진 인터뷰 2020.12 기준 · 21만: YouTube 공개 데이터, 2026.10.23 기준</small></span>
-      </a>
     </div>
 
     <!-- 05 ON AIR: broadcast and creator collaborations -->
