@@ -927,14 +927,6 @@ h1[tabindex="-1"]:focus{outline:none}
 .papers li{padding:14px 2px;border-bottom:1px solid var(--line);font-size:15.5px;font-weight:600;letter-spacing:-.02em;line-height:1.55}
 
 /* Chainshift */
-.cs-logo{display:inline-flex;align-items:center;gap:14px;padding:12px 18px;border-radius:16px;background:var(--bg-2)}
-.cs-logo img{height:26px;width:auto}
-.cs-logo span{font-size:12.5px;font-weight:700;color:var(--ink-3);letter-spacing:.04em}
-.cs-char{display:grid;grid-template-columns:112px minmax(0,1fr);gap:20px;align-items:center}
-.cs-char img{width:112px;height:112px;object-fit:contain;background:#fff;border-radius:28px}
-.cs-char b{display:block;font-size:17px;font-weight:800;letter-spacing:-.03em;margin-bottom:6px}
-.cs-char p{font-size:14.5px;color:var(--ink-2);line-height:1.65}
-.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .flow4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .flow4 li{position:relative;padding:22px;border-radius:20px;background:var(--bg-2)}
 .flow4 li b{font-size:13px;font-weight:800;color:var(--accent-ink)}
@@ -983,6 +975,9 @@ h1[tabindex="-1"]:focus{outline:none}
 .roles-mini li{display:flex;gap:10px;font-size:14px;line-height:1.5;color:var(--ink-2)}
 .roles-mini li svg{color:var(--accent);margin-top:1px}
 .roles-mini b{color:var(--ink);font-weight:700}
+/* chainshift: the role list on its own, two columns while there is room */
+.roles-mini--wide{margin-top:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+@media (max-width:760px){.roles-mini--wide{grid-template-columns:minmax(0,1fr)}}
 
 /* lectures */
 .prog{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:clamp(20px,3vw,40px);scroll-margin-top:110px}
@@ -1198,8 +1193,6 @@ h1[tabindex="-1"]:focus{outline:none}
   .roles b{font-size:16px;line-height:1.4}
   .roles small{font-size:13px;margin-top:1px}
   .roles em{grid-column:2;margin-top:3px;font-size:12.5px}
-  .cs-char{grid-template-columns:80px minmax(0,1fr)}
-  .cs-char img{width:80px;height:80px;border-radius:22px}
   .yt__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px}
   .yt__grid>li:nth-child(n+5){display:none}
   .case__media--phone{aspect-ratio:4/5;padding:18px}
@@ -1564,23 +1557,13 @@ h1[tabindex="-1"]:focus{outline:none}
   </section>
   <section class="wrap" style="padding-bottom:clamp(24px,3vw,40px)">
     <div class="block">
-      <div class="two">
-        <div class="card rv" style="display:grid;gap:24px;align-content:start">
-          <span class="cs-logo"><img src="assets/img/cs-logo-white.svg" alt="Chainshift" width="156" height="36"><span>AI SEARCH · GEO SaaS</span></span>
-          <div class="cs-char">
-            <img src="assets/img/cs-character.webp" alt="돋보기를 든 하늘색 토끼 캐릭터" width="700" height="700" loading="lazy">
-            <div><b>첫 적용: AI 검색 채널 '서치시프트' <span class="nw">런칭 기획</span></b><p>"뇌피셜 말고 AI피셜." 댓글·DM으로 의뢰받은 질문을 AI에게 1,000번 대신 묻고 브랜드 언급률 랭킹으로 보여 주는 숏폼 코너를 설계했습니다. 마지막 장면은 'AI 추천 진단 신청'으로 이어지게 했고, 캐릭터는 생성형 AI로, 15초 세로 릴스 시안은 Claude와 HyperFrames로 만들었습니다.</p></div>
-          </div>
-          <div class="facts" role="group" aria-label="회사 정보"><span class="chip">중기부 TIPS 선정 · 2025</span><span class="chip">AWS 마켓플레이스 등록 · 2026</span><span class="chip">26개 브랜드 이용</span></div>
-        </div>
-        <ul class="card roles-mini rv" style="margin-top:0;align-content:start;gap:18px">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>AI 콘텐츠 디렉터</b><br>B2B 콘텐츠 전략, GEO SaaS 브랜딩, 유튜브·인스타그램 채널 기획과 제작을 맡습니다</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>9단계 제작 공정 설계</b><br>소재 발굴, 기획·대본, 이미지·영상 생성, 조립, 썸네일, 마무리, 쇼츠, 업로드, 블로그 전환으로 나누고 단계마다 사람이 승인할 지점을 정했습니다</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>개인 작업 도구를 회사로</b><br>직접 만든 이슈 레이더·말투 스킬 2개와 공개 영상 제작 스킬 21개, 'AI티 제거' 규칙을 집과 회사 PC에서 함께 쓰도록 묶었습니다</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>이어 쓰는 작업 기록</b><br>채널 기획 세션과 릴스 제작 세션을 나눠 동시에 돌리고, 결정 사항과 다음 할 일은 문서로 남겨 다른 PC에서도 이어 갑니다</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>GEO 데이터 연결</b><br>체인시프트의 AI 검색 데이터를 Claude에 연결해, 6개 AI 검색의 답변과 인용 출처를 분석할 실험 환경을 준비했습니다</span></li>
-        </ul>
-      </div>
+      <ul class="card roles-mini roles-mini--wide rv">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>AI 콘텐츠 디렉터</b><br>B2B 콘텐츠 전략, GEO SaaS 브랜딩, 유튜브·인스타그램 채널 기획과 제작을 맡습니다</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>9단계 제작 공정 설계</b><br>소재 발굴, 기획·대본, 이미지·영상 생성, 조립, 썸네일, 마무리, 쇼츠, 업로드, 블로그 전환으로 나누고 단계마다 사람이 승인할 지점을 정했습니다</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>개인 작업 도구를 회사로</b><br>직접 만든 이슈 레이더·말투 스킬 2개와 공개 영상 제작 스킬 21개, 'AI티 제거' 규칙을 집과 회사 PC에서 함께 쓰도록 묶었습니다</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>이어 쓰는 작업 기록</b><br>채널 기획 세션과 릴스 제작 세션을 나눠 동시에 돌리고, 결정 사항과 다음 할 일은 문서로 남겨 다른 PC에서도 이어 갑니다</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>GEO 데이터 연결</b><br>체인시프트의 AI 검색 데이터를 Claude에 연결해, 6개 AI 검색의 답변과 인용 출처를 분석할 실험 환경을 준비했습니다</span></li>
+      </ul>
     </div>
     <div class="block">
       <div class="aiflow rv" id="cs-pipeline" role="group" aria-label="AI Native 콘텐츠 제작·배포 파이프라인">
