@@ -434,6 +434,8 @@ h1[tabindex="-1"]:focus{outline:none}
 
 /* timeline */
 .tl{padding:clamp(18px,2.6vw,32px)}
+/* phones skip the career timeline; the section after it closes the gap */
+@media (max-width:760px){.sec--tl{display:none}.sec--tl + .sec{padding-top:0}}
 .tl__axis,.tl__row{display:grid;grid-template-columns:minmax(180px,250px) minmax(0,1fr);gap:20px;align-items:center}
 .tl__axis{height:36px}
 .tl__years{position:relative;height:100%}
@@ -1393,7 +1395,7 @@ h1[tabindex="-1"]:focus{outline:none}
     </div>
   </section>
 
-  <section class="sec sec--alt" aria-labelledby="tl-title">
+  <section class="sec sec--alt sec--tl" aria-labelledby="tl-title">
     <div class="wrap">
       <div class="head">
         <h2 class="h-2" id="tl-title">통신망에서 AI 검색까지,<br>미디어가 흐르는 길을 따라 일했습니다</h2>
