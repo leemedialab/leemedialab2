@@ -591,7 +591,6 @@ h1[tabindex="-1"]:focus{outline:none}
 .photos{display:grid;grid-template-columns:1.6fr 1fr;gap:16px}
 .photos .media{aspect-ratio:16/9}
 .photos .media:last-child{aspect-ratio:auto}
-.miles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 /* 콘텐츠 디렉터: the accolades column beside the hero photo */
 .fb-side{display:grid;gap:16px}
 /* ---------- #yodel creator story (CAREER 03): long-form chapters, classes prefixed cv- ----------
@@ -883,13 +882,6 @@ h1[tabindex="-1"]:focus{outline:none}
 .award__big{font-size:clamp(44px,4.6vw,64px);font-weight:800;letter-spacing:-.05em;line-height:1}
 .award p{font-size:15px;line-height:1.65;color:#fff}
 .award__fig{width:100%;height:auto;margin-top:14px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.35))}
-.miles em{font-style:normal;font-size:13.5px;font-weight:800;color:var(--accent-ink)}
-.miles a.card{display:block;color:inherit;text-decoration:none;transition:border-color .2s,transform .35s var(--ease),box-shadow .35s var(--ease)}
-.miles a.card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow)}
-.miles .more{display:inline-flex;align-items:center;gap:5px;margin-top:14px;font-style:normal;font-size:13px;font-weight:800;color:var(--accent-ink)}
-.miles .more .ic{width:14px;height:14px}
-.miles b{display:block;margin-top:8px;font-size:17px;font-weight:800;letter-spacing:-.03em}
-.miles span{display:block;margin-top:6px;font-size:14px;color:var(--ink-2);line-height:1.6}
 
 /* Yonsei */
 /* Yonsei research: a feature spread. One lead (01) with a large cover and a colophon, two shorter items (02, 03) below.
@@ -1205,7 +1197,7 @@ h1[tabindex="-1"]:focus{outline:none}
   .portrait{justify-self:start;max-width:440px}
   .speaker__photo{position:static}
   .speaker__photo .media{aspect-ratio:16/11}
-  .feats,.three,.gallery,.miles,.info3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feats,.three,.gallery,.info3{grid-template-columns:repeat(2,minmax(0,1fr))}
   .feats > :last-child,.info3 > :last-child{grid-column:1/-1}
   .four,.flow4,.ask{grid-template-columns:repeat(2,minmax(0,1fr))}
   .flow4 li::after{display:none}
@@ -1219,7 +1211,6 @@ h1[tabindex="-1"]:focus{outline:none}
   .hero__grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:end}
   .portrait{justify-self:end;max-width:none}
   .feats > :last-child{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:20px}
-  .miles > :last-child{grid-column:1/-1}
 }
 @media (max-width:760px){
   .tl__axis,.tl__row{grid-template-columns:minmax(0,1fr);gap:0}
@@ -1236,7 +1227,7 @@ h1[tabindex="-1"]:focus{outline:none}
   .yside{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:600px){
-  .feats,.three,.gallery,.miles,.info3,.four,.flow4,.ask,.two,.steps{grid-template-columns:minmax(0,1fr)}
+  .feats,.three,.gallery,.info3,.four,.flow4,.ask,.two,.steps{grid-template-columns:minmax(0,1fr)}
   .feats > :last-child,.info3 > :last-child{grid-column:auto}
   .bento{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .stat{min-height:170px;gap:18px}
@@ -1756,15 +1747,6 @@ h1[tabindex="-1"]:focus{outline:none}
         <figure class="rv"><div class="media"><img src="assets/img/pd-host-2.webp" alt="영화 예스터데이 포스터를 사이에 두고 이동진 평론가와 이야기하는 이홍연" width="1600" height="900" loading="lazy"></div><figcaption class="cap">2022 · 〈비틀즈 영화〉 편 토크 진행</figcaption></figure>
         <figure class="rv"><div class="media"><img src="assets/img/pd-host-3.webp" alt="테이블에 마주 앉아 이동진 평론가의 이야기에 크게 웃는 이홍연" width="1600" height="900" loading="lazy"></div><figcaption class="cap">2023 · 〈퇴사〉 편 토크 진행</figcaption></figure>
         <figure class="rv"><div class="media"><img src="assets/img/pd-host-4.webp" alt="좋은 영화 기준 순위 보드 앞에서 카드를 들고 진행하는 이홍연" width="1600" height="900" loading="lazy"></div><figcaption class="cap">2023 · 〈좋은 영화의 기준〉 순위 발표 진행</figcaption></figure>
-      </div>
-    </div>
-    <div class="block">
-      <div class="miles">
-        <div class="card rv"><em>2020.11</em><b>SK그룹 toktokTV 대상</b><span>'Best Creator를 찾아라' · B봇 캐릭터 영상</span></div>
-        <a class="card rv" href="https://www.youtube.com/channel/UCP8AwWrEOxNrrjUVCE5jXJQ" target="_blank" rel="noopener"><em>2021.05</em><b>3개월, 3.6배</b><span>B tv 유니버스 영화 콘텐츠로 구독자 2.1만 → 7.6만</span><i class="more">채널 보기<svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></i></a>
-        <a class="card rv" href="https://www.youtube.com/watch?v=ouqMBrsz_uY" target="_blank" rel="noopener"><em>2021.07</em><b>실버버튼</b><span>구독자 10만 돌파 · 언박싱 라이브</span><i class="more">영상 보기<svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></i></a>
-        <a class="card rv" href="https://www.fnnews.com/news/202404172242599364" target="_blank" rel="noopener"><em>2023.12</em><b>Global Influencer Award</b><span>국회도서관장상 (채널 수상, 언론 보도)</span><i class="more">기사 보기<svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></i></a>
-        <a class="card rv" href="https://www.fnnews.com/news/202401201301084131" target="_blank" rel="noopener"><em>2024.01</em><b>구독자 50만 돌파</b><span>파이낸셜뉴스 등 언론 보도</span><i class="more">기사 보기<svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></i></a>
       </div>
     </div>
     <div class="block">
