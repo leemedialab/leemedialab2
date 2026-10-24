@@ -585,12 +585,13 @@ h1[tabindex="-1"]:focus{outline:none}
 .news__body small{font-size:12.5px;color:var(--ink-3)}
 @media (max-width:960px){.news__img{flex:none;min-height:0;aspect-ratio:3/2}}
 /* home: the same press card laid on its side under the figures it backs up */
-.sec--nums .news--row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);margin-top:12px}
+.sec--nums .news--row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+.sec--nums .news--row + .bento{margin-top:12px}
 .news--row .news__img{flex:none;min-height:0;aspect-ratio:16/10}
 .news--row .news__body{align-content:center;gap:10px;padding:clamp(22px,3.2vw,48px)}
 .news--row .news__body b{font-size:clamp(20px,2.2vw,30px);line-height:1.3}
 .news--row .news__body small{font-size:13px}
-@media (max-width:760px){.sec--nums .news--row{grid-template-columns:minmax(0,1fr);margin-top:10px}.news--row .news__img{aspect-ratio:3/2}}
+@media (max-width:760px){.sec--nums .news--row{grid-template-columns:minmax(0,1fr)}.sec--nums .news--row + .bento{margin-top:10px}.news--row .news__img{aspect-ratio:3/2}}
 .chart svg{display:block;width:100%;min-width:600px;height:auto}
 .chart__scroll{overflow-x:auto;margin-top:8px}
 @media (max-width:1300px){.tl__bar--short{font-size:0;padding:0}}
@@ -1314,7 +1315,7 @@ h1[tabindex="-1"]:focus{outline:none}
       <div class="portrait">
         <figure class="media"><img src="assets/img/profile.webp" alt="베이지 수트를 입은 이홍연 프로필 사진" width="1200" height="1200" fetchpriority="high"></figure>
         <div class="portrait__tag" aria-hidden="true"><span><b>이홍연</b><small>AI-NATIVE CONTENT DIRECTOR</small></span><small>Seoul · KR</small></div>
-        <div class="float float--a" aria-hidden="true"><span class="float__ic"><svg class="ic"><use href="#i-play"/></svg></span><span><b>구독자 60만</b><span>유튜브 채널 기획·MC</span></span></div>
+        <div class="float float--a" aria-hidden="true"><span class="float__ic"><svg class="ic"><use href="#i-play"/></svg></span><span><b>구독자 60만</b><span>유튜브 채널 기획·메인 MC</span></span></div>
         <div class="float float--b" aria-hidden="true"><span class="float__ic"><svg class="ic"><use href="#i-won"/></svg></span><span><b>105억 수주</b><span>ICT B2B 컨설팅</span></span></div>
       </div>
     </div>
@@ -1351,6 +1352,7 @@ h1[tabindex="-1"]:focus{outline:none}
       <div class="head">
         <h2 class="h-2" id="num-title">숫자로 증명해 온 8년</h2>
       </div>
+      <a class="card news news--row rv" href="https://www.fnnews.com/news/202401201301084131" target="_blank" rel="noopener" aria-label="파이낸셜뉴스 기사 「SKB 'B tv 이동진의 파이아키아', 구독자 50만명 돌파」 새 창으로 보기"><span class="news__img"><img src="assets/img/pd-50man.webp" alt="'구독자 50만 명 돌파!' 판을 함께 든 이홍연과 이동진 영화평론가" width="1024" height="684" loading="lazy"><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>기사 보기</span></span><span class="news__body"><em>파이낸셜뉴스 · 2024.01.21</em><b>SKB 'B tv 이동진의 파이아키아', 구독자 50만명 돌파</b><small>진행자 이홍연 SK브로드밴드 매니저와 이동진 영화평론가 · 사진 SKB 제공</small></span></a>
       <div class="bento">
         <div class="card stat stat--wide is-dark rv">
           <div class="stat__top"><span class="stat__k">기획·MC 유튜브 채널 구독자</span><span class="stat__ic"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span></div>
@@ -1383,7 +1385,6 @@ h1[tabindex="-1"]:focus{outline:none}
           <div><div class="stat__num"><span data-count="264">264</span><small>만</small></div><p class="stat__sub">최고 63만 회 · 2019–2026</p></div>
         </a>
       </div>
-      <a class="card news news--row rv" href="https://www.fnnews.com/news/202401201301084131" target="_blank" rel="noopener" aria-label="파이낸셜뉴스 기사 「SKB 'B tv 이동진의 파이아키아', 구독자 50만명 돌파」 새 창으로 보기"><span class="news__img"><img src="assets/img/pd-50man.webp" alt="'구독자 50만 명 돌파!' 판을 함께 든 이홍연과 이동진 영화평론가" width="1024" height="684" loading="lazy"><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>기사 보기</span></span><span class="news__body"><em>파이낸셜뉴스 · 2024.01.21</em><b>SKB 'B tv 이동진의 파이아키아', 구독자 50만명 돌파</b><small>진행자 이홍연 SK브로드밴드 매니저와 이동진 영화평론가 · 사진 SKB 제공</small></span></a>
     </div>
   </section>
 
