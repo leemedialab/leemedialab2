@@ -1020,6 +1020,14 @@ h1[tabindex="-1"]:focus{outline:none}
 .aiflow__top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;align-items:baseline}
 .aiflow__top :is(h2,h4){font-size:clamp(19px,1.8vw,23px);font-weight:800;letter-spacing:-.035em}
 .aiflow__top p{font-size:13px;color:var(--ink-3);font-weight:600}
+/* lecture 02: the same pipeline, folded until the title is clicked */
+.aiflow--fold{display:block}
+.aiflow--fold > summary{cursor:pointer;list-style:none;border-radius:12px}
+.aiflow--fold > summary::-webkit-details-marker{display:none}
+.aiflow--fold > summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.aiflow--fold .aiflow__body{display:grid;gap:16px;margin-top:16px}
+.fold-hint{margin-left:4px;font-size:.78em;font-weight:700;color:var(--accent-ink)}
+.aiflow--fold[open] .fold-hint__open,.aiflow--fold:not([open]) .fold-hint__close{display:none}
 .ico{display:inline-grid;place-items:center;flex:none;width:36px;height:36px;border-radius:11px;background:var(--accent-soft);color:var(--accent-ink)}
 .ico svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .brain{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 16px;align-items:start;padding:18px 20px;border-radius:18px}
@@ -2159,11 +2167,12 @@ h1[tabindex="-1"]:focus{outline:none}
       <dl class="prog__meta"><div><dt>추천 대상</dt><dd>콘텐츠 실무자, 1인 크리에이터, 소규모 마케팅팀</dd></div><div><dt>형식</dt><dd>실습 워크숍 3~4시간 · 연속 과정</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">생성형 AI</span><span class="chip">자동화</span><span class="chip">1인 제작</span></dd></div></dl>
 
       <div class="prog__wide">
-        <div class="aiflow" role="group" aria-label="AI Native 콘텐츠 제작·배포 파이프라인">
-          <div class="aiflow__top">
-            <h4>운영 중인 AI 콘텐츠 제작·배포 파이프라인</h4>
+        <details class="aiflow aiflow--fold">
+          <summary class="aiflow__top">
+            <h4>운영 중인 AI 콘텐츠 제작·배포 파이프라인 <span class="fold-hint"><span class="fold-hint__open">(클릭)</span><span class="fold-hint__close">(접기)</span></span></h4>
             <p>9단계 · 사람은 판단과 승인만</p>
-          </div>
+          </summary>
+          <div class="aiflow__body">
           <div class="brain is-dark">
             <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg></span>
             <div><b>Claude · 두뇌와 지휘</b><p>기획·대본·작업 지휘는 Claude가 맡습니다.</p></div>
@@ -2287,7 +2296,8 @@ h1[tabindex="-1"]:focus{outline:none}
             <span><i class="tg">API</i>API·스크립트</span>
             <span><i class="tg tg--br">브라우저</i>브라우저 자동화</span>
           </div>
-        </div>
+          </div>
+        </details>
       </div>
     </article>
 
