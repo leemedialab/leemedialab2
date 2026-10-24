@@ -84,8 +84,8 @@ if(t==='light'||t==='dark')d.setAttribute('data-theme',t)})();
 }
 /* nested fills step up one level inside raised cards so chips and buttons keep their shape */
 .is-dark :is(.card,.cpill),.card.is-dark{--bg-2:#202028;--bg-3:#2A2A33}
-:root[data-theme="dark"] :is(.card,.cpill,.dock__panel){--bg-2:#1F1F26;--bg-3:#292930}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) :is(.card,.cpill,.dock__panel){--bg-2:#1F1F26;--bg-3:#292930}}
+:root[data-theme="dark"] :is(.card,.cpill){--bg-2:#1F1F26;--bg-3:#292930}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) :is(.card,.cpill){--bg-2:#1F1F26;--bg-3:#292930}}
 /* the glass bar turns dark over the dark views */
 body:has(.view.is-dark.is-on) .bar{--glass:rgba(11,11,15,.72);--ink:#F4F4F6;--ink-2:#ADADB8;--ink-3:#8E8E9A;--bg:#0B0B0F;--bg-2:#1F1F27;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.18)}
 body:has(.view.is-dark.is-on){background:#0B0B0F}
@@ -1132,7 +1132,7 @@ h1[tabindex="-1"]:focus{outline:none}
 .links a:hover{background:var(--bg-2)}
 .links a small{font-size:11.5px;color:var(--ink-3);font-weight:700;letter-spacing:.04em}
 
-/* contact details: hero pills, contact cards, floating dock */
+/* contact details: hero pills, contact cards */
 [hidden]{display:none!important}
 .contact-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .cpill{display:inline-flex;align-items:center;gap:9px;height:44px;padding:0 6px 0 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:15px;font-weight:700;letter-spacing:-.02em;max-width:100%}
@@ -1157,23 +1157,6 @@ h1[tabindex="-1"]:focus{outline:none}
 .cta__contact a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-variant-numeric:tabular-nums}
 .cta__contact a:hover,a.foot__mail:hover{color:var(--accent-ink)}
 .cta__contact svg{color:var(--accent);width:18px;height:18px}
-.dock{position:fixed;right:max(20px,calc(env(safe-area-inset-right,0px) + 16px));bottom:calc(env(safe-area-inset-bottom,0px) + 20px);z-index:55}
-.dock__btn{display:flex;align-items:center;gap:10px;height:56px;padding:0 22px 0 8px;border-radius:999px;border:0;background:var(--ink);color:var(--bg);font:800 15px var(--font);letter-spacing:-.02em;cursor:pointer;box-shadow:0 16px 36px -14px rgba(0,0,0,.45);transition:transform .35s var(--ease)}
-.dock__btn:hover{transform:translateY(-2px)}
-.dock{transition:opacity .3s var(--ease),transform .3s var(--ease)}
-.dock.is-away{opacity:0;transform:translateY(16px);pointer-events:none}
-.dock__btn{box-shadow:0 0 0 1px rgba(255,255,255,.2),0 16px 36px -14px rgba(0,0,0,.45)}
-.dock__btn > span:first-child{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff}
-.dock__panel{position:absolute;right:0;bottom:68px;width:min(340px,calc(100vw - 32px));padding:18px;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:grid;gap:10px;animation:viewIn .35s var(--ease) both}
-.dock__panel > b{font-size:16px;font-weight:800;letter-spacing:-.03em}
-.dock__panel > p{font-size:13px;color:var(--ink-3);margin-top:-6px}
-.dock__row{display:flex;align-items:center;gap:10px;padding:10px 10px 10px 12px;border-radius:14px;background:var(--bg-2)}
-.dock__row svg{color:var(--accent)}
-.dock__row a{flex:1;min-width:0;font-size:15.5px;font-weight:800;letter-spacing:-.02em;text-decoration:none;user-select:all;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
-.dock__row .copy{background:var(--card)}
-.dock__more{font-size:13.5px;font-weight:700;color:var(--ink-2);text-decoration:none;text-align:right}
-.dock__more:hover{color:var(--accent-ink)}
-@media (max-width:600px){.dock__btn{height:52px;padding:0 16px 0 6px;font-size:14px}.dock__btn > span:first-child{width:38px;height:38px}}
 
 /* pager + footer */
 .pager{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-block:clamp(24px,3vw,40px) clamp(48px,6vw,80px)}
@@ -2599,17 +2582,6 @@ h1[tabindex="-1"]:focus{outline:none}
   </div>
 </footer>
 
-<div class="dock" id="dock">
-  <button class="dock__btn" id="dockBtn" type="button" aria-expanded="false" aria-controls="dockPanel"><span><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span>강의 문의</button>
-  <div class="dock__panel" id="dockPanel" role="dialog" aria-label="강의 문의 연락처" hidden>
-    <b>강의·자문 문의</b>
-    <p>편하신 방법으로 연락 주세요.</p>
-    <div class="dock__row"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:01073681377">010-7368-1377</a><button class="copy" type="button" data-copy="010-7368-1377" aria-label="전화번호 복사">복사</button></div>
-    <div class="dock__row"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:leemedialab@gmail.com">leemedialab@gmail.com</a><button class="copy" type="button" data-copy="leemedialab@gmail.com" aria-label="이메일 주소 복사">복사</button></div>
-    <a class="dock__more" href="#contact">강의 문의 페이지로 →</a>
-  </div>
-</div>
-
 <script>
 (function(){
   var root=document.documentElement;
@@ -2720,33 +2692,13 @@ h1[tabindex="-1"]:focus{outline:none}
     clearTimeout(b._t);
     function done(msg){b.textContent=msg;b.classList.add('is-done');b._t=setTimeout(function(){b.textContent=b.dataset.label;b.classList.remove('is-done')},1800)}
     function fallback(){
-      var box=b.closest('.cpill,.ccard,.dock__row')||b.parentNode;
+      var box=b.closest('.cpill,.ccard')||b.parentNode;
       var a=box.querySelector(t.indexOf('@')>0?'a[href^="mailto:"]':'a[href^="tel:"]');
       if(a){var r=document.createRange();r.selectNodeContents(a);var s=getSelection();s.removeAllRanges();s.addRange(r)}
       done('Ctrl+C');
     }
     try{navigator.clipboard.writeText(t).then(function(){done('복사됨')},fallback)}catch(err){fallback()}
   });
-
-  // floating contact dock
-  var dock=document.getElementById('dock'),dockBtn=document.getElementById('dockBtn'),dockPanel=document.getElementById('dockPanel');
-  function setDock(open){dockPanel.hidden=!open;dockBtn.setAttribute('aria-expanded',String(open));
-    if(open){var f=dockPanel.querySelector('a');if(f)f.focus()}}
-  dockBtn.addEventListener('click',function(){setDock(dockPanel.hidden)});
-  document.addEventListener('click',function(e){if(!dockPanel.hidden&&!dock.contains(e.target))setDock(false)});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!dockPanel.hidden){setDock(false);dockBtn.focus()}});
-  dockPanel.addEventListener('click',function(e){if(e.target.closest('a[href^="#"]'))setDock(false)});
-  window.addEventListener('hashchange',function(){dock.hidden=location.hash==='#contact'});
-  dock.hidden=location.hash==='#contact';
-  // step the dock aside while the page's own phone/email lines are on screen, so it never covers them
-  if('IntersectionObserver' in window){
-    var inline=[].slice.call(document.querySelectorAll('.contact-row,.cta__contact,.foot__contact'));
-    var dio=new IntersectionObserver(function(es){
-      es.forEach(function(en){en.target._in=en.isIntersecting});
-      var away=inline.some(function(t){return t._in});dock.classList.toggle('is-away',away);if(away&&!dockPanel.hidden)setDock(false);
-    });
-    inline.forEach(function(t){dio.observe(t)});
-  }
 
   // a link to the hash already in the address bar fires no hashchange; route it anyway
   document.addEventListener('click',function(e){
