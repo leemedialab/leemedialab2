@@ -540,8 +540,17 @@ h1[tabindex="-1"]:focus{outline:none}
 .quote--link{color:var(--ink);text-decoration:none;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
 .quote--link:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .quote__foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
-.quote__go{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:999px;background:var(--accent-fill);color:#fff;font-size:13px;font-weight:800;white-space:nowrap}
-.quote__go .ic{width:15px;height:15px}
+/* award quote over the ceremony photo: text sits on the dark left, the photo fades in from the right */
+.quote--photo{overflow:hidden;isolation:isolate}
+.quote--photo .quote__bg{position:absolute;z-index:-2;top:0;right:0;width:72%;height:100%;object-fit:cover;object-position:68% 22%;pointer-events:none}
+.quote--photo::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:
+  linear-gradient(0deg,rgba(22,22,28,.9) 0%,rgba(22,22,28,0) 38%),
+  linear-gradient(90deg,#16161C 0%,#16161C 28%,rgba(22,22,28,.86) 42%,rgba(22,22,28,.42) 62%,rgba(22,22,28,0) 84%)}
+@media (max-width:760px){
+  .card.quote--photo{padding-top:200px}
+  .quote--photo .quote__bg{width:100%;height:228px;object-position:70% 18%}
+  .quote--photo::before{background:linear-gradient(180deg,rgba(22,22,28,0) 0,rgba(22,22,28,0) 96px,rgba(22,22,28,.7) 168px,#16161C 228px)}
+}
 /* news card: the press photo on top, outlet, date and headline below it, the whole card opens the article */
 .news{display:flex;flex-direction:column;padding:0;overflow:hidden;color:inherit;text-decoration:none;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
 .news:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
@@ -1661,10 +1670,11 @@ h1[tabindex="-1"]:focus{outline:none}
       <div class="feature-big">
         <a class="card news rv" href="https://www.fnnews.com/news/202401201301084131" target="_blank" rel="noopener" aria-label="파이낸셜뉴스 기사 「SKB 'B tv 이동진의 파이아키아', 구독자 50만명 돌파」 새 창으로 보기"><span class="news__img"><img src="assets/img/pd-50man.webp" alt="'구독자 50만 명 돌파!' 판을 함께 든 이홍연과 이동진 영화평론가" width="1024" height="684" loading="lazy"><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>기사 보기</span></span><span class="news__body"><em>파이낸셜뉴스 · 2024.01.21</em><b>SKB 'B tv 이동진의 파이아키아', 구독자 50만명 돌파</b><small>진행자 이홍연 SK브로드밴드 매니저와 이동진 영화평론가 · 사진 SKB 제공</small></span></a>
         <div class="fb-side">
-          <a class="card quote quote--link is-dark rv" href="https://www.metroseoul.co.kr/article/20240121500129" target="_blank" rel="noopener" aria-label="메트로신문 기사: 파이아키아 국회도서관장상 수상 새 창으로 보기">
+          <a class="card quote quote--link quote--photo is-dark rv" href="https://www.metroseoul.co.kr/article/20240121500129" target="_blank" rel="noopener" aria-label="메트로신문 기사: 파이아키아 국회도서관장상 수상 새 창으로 보기">
             <span class="eyebrow">국회 문화체육관광위원회 주최 · 2023.12</span>
             <blockquote>글로벌 인플루언서 어워드<br><span class="grad">국회도서관장상</span> 수상</blockquote>
-            <span class="quote__foot"><cite>《B tv 이동진의 파이아키아》 채널 수상 · 메트로신문 2024.01.21</cite><span class="quote__go">기사 보기<svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></span></span>
+            <img class="quote__bg" src="assets/img/pd-award.webp" alt="" width="1400" height="757" loading="lazy">
+            <span class="quote__foot"><cite>《B tv 이동진의 파이아키아》 채널 수상 · 메트로신문 2024.01.21</cite></span>
           </a>
           <div class="card award rv">
             <div class="award__txt">
@@ -1859,7 +1869,7 @@ h1[tabindex="-1"]:focus{outline:none}
       </div>
       <p class="note">조회수·구독자: YouTube 공개 데이터, 2026.10.23 기준 · 썸네일을 누르면 해당 영상으로 이동합니다</p>
       <div class="two cv-then">
-        <figure class="rv"><a class="media golink" style="aspect-ratio:16/9" href="https://www.youtube.com/@yodelland/videos" target="_blank" rel="noopener" aria-label="요들랜드TV 채널 새 창으로 보기"><img src="assets/img/yd-2020home.webp" alt="2020년 7월 요들랜드TV 채널 홈 화면 캡처" width="1600" height="900" loading="lazy"><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>채널 보기</span></a><figcaption class="cap">2020.07 채널 홈 · 영상 15편, 구독자 1.13만</figcaption></figure>
+        <figure class="rv"><a class="media golink" style="aspect-ratio:16/9" href="https://www.youtube.com/watch?v=VfvDleW2m8s" target="_blank" rel="noopener" aria-label="요들송 M/V 영상 새 창으로 보기"><img src="assets/img/yd-mv.webp" alt="요들송 M/V 썸네일: 요들 의상을 입고 말 모형에 올라탄 요들행님, Franzl Lang 라이브 완벽 재현" width="1200" height="675" loading="lazy"><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>영상 보기</span></a><figcaption class="cap">뮤직비디오 자체 제작 · Franzl Lang 커버 · 2020</figcaption></figure>
         <figure class="rv"><a class="media golink" style="aspect-ratio:16/9" href="https://www.youtube.com/watch?v=ZoueHLYOPug" target="_blank" rel="noopener" aria-label="요들랜드 시즌 2 1화 영상 새 창으로 보기"><img src="assets/img/yd-s2ep1.webp" alt="요들랜드 TV 시즌 2 1화 썸네일: 요들 모자를 쓴 요PD 이홍연과 요들언니, 6년만에 재결합 댓글 읽기" width="1280" height="720" loading="lazy"><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>영상 보기</span></a><figcaption class="cap">시즌 2 1화 「6년만의 복귀」 댓글 Q&amp;A · 2026</figcaption></figure>
       </div>
     </div>
