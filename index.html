@@ -229,6 +229,10 @@ h1[tabindex="-1"]:focus{outline:none}
   .logo__role{padding-left:8px;font-size:10.5px}
   .bar__act .btn--sm{padding:0 11px;font-size:13px}
 }
+/* phones: the name alone; the role line made the first row too busy */
+@media (max-width:760px){
+  .logo__role{display:none}
+}
 @media (max-width:339px){
   .logo{gap:6px}
   .logo__name b{font-size:15.5px}
@@ -334,6 +338,8 @@ h1[tabindex="-1"]:focus{outline:none}
   background:radial-gradient(closest-side at 60% 40%,var(--glow-1),transparent 70%),radial-gradient(closest-side at 30% 70%,var(--glow-2),transparent 70%);filter:blur(10px)}
 .hero__grid{position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(32px,5vw,80px);align-items:center}
 .hero h1{margin-top:22px}
+#hero-title{font-size:clamp(34px,4.6vw,66px);line-height:1.16}  /* three longer lines than the other display titles */
+@media (max-width:760px){#hero-title{font-size:clamp(26px,calc((100vw - 32px) / 9),34px)}}  /* keeps three lines down to 320px */
 /* the two-row bar already shows the role beside the name, so the hero drops its copy of it there */
 @media (max-width:1360px){.hero__role{display:none}.hero .hero__role + h1{margin-top:0}}
 .hero .lead{margin-top:22px}
@@ -1279,7 +1285,7 @@ h1[tabindex="-1"]:focus{outline:none}
     <div class="wrap hero__grid">
       <div>
         <span class="pill pill--live hero__role">AI-Native 콘텐츠 디렉터 · MC · 미디어/플랫폼산업 연구</span>
-        <h1 class="h-display" id="hero-title">AI가 고르는 시대,<br><span class="grad">선택받는 콘텐츠</span>를<br>설계합니다</h1>
+        <h1 class="h-display" id="hero-title">AI-Native로 제작하고,<br><span class="grad">미디어 산업</span>을 연구하며<br>직접 알리고 진행합니다.</h1>
         <p class="lead">통신 네트워크 컨설턴트부터 60만 구독자 규모의 유료방송·유튜브 오리지널 채널 기획과 <strong>메인 MC</strong>, AI 검색(GEO) 및 AI Native 콘텐츠 제작까지 미디어·ICT 생태계 전반을 아우르는 실무형 디렉터입니다.</p>
         <div class="sig"><b>이홍연</b><i></i><span>Hongyeon Lee</span><i></i><span>SK브로드밴드(8년) · Chainshift AI · 연세대 정보대학원(콘텐츠·플랫폼 비즈니스)</span></div>
         <div class="hero__cta">
