@@ -607,13 +607,13 @@ h1[tabindex="-1"]:focus{outline:none}
    behind the panels, cut-outs that step out of their panels, and the webzine's soft lime used only on the
    production-timeline and B봇 panels and in the ghost words. Every colour is a token redefined for dark. */
 :root{--cv-lime:#E5F3A6;--cv-lime-line:rgba(62,78,0,.17);--cv-ghost:#DCEF80;--cv-outline:rgba(11,11,15,.085);--cv-hand:#47525D;
-  --cv-glass:rgba(255,255,255,.88);--cv-mark:#FFFFFF;--cv-mark-ink:#3F4A00;--cv-ghost-hero:#E8F3B6}
+  --cv-glass:rgba(255,255,255,.88);--cv-mark:#FFFFFF;--cv-mark-ink:#3F4A00}
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){--cv-lime:#1A1E10;--cv-lime-line:rgba(214,245,120,.16);--cv-ghost:rgba(214,245,120,.085);--cv-outline:rgba(255,255,255,.09);--cv-hand:#BAC4CE;
-    --cv-glass:rgba(16,16,21,.86);--cv-mark:#2A3015;--cv-mark-ink:#DDF27F;--cv-ghost-hero:rgba(214,245,120,.085)}
+    --cv-glass:rgba(16,16,21,.86);--cv-mark:#2A3015;--cv-mark-ink:#DDF27F}
 }
 :root[data-theme="dark"]{--cv-lime:#1A1E10;--cv-lime-line:rgba(214,245,120,.16);--cv-ghost:rgba(214,245,120,.085);--cv-outline:rgba(255,255,255,.09);--cv-hand:#BAC4CE;
-  --cv-glass:rgba(16,16,21,.86);--cv-mark:#2A3015;--cv-mark-ink:#DDF27F;--cv-ghost-hero:rgba(214,245,120,.085)}
+  --cv-glass:rgba(16,16,21,.86);--cv-mark:#2A3015;--cv-mark-ink:#DDF27F}
 
 /* shared pieces: chapter head, ghost words, panels whose background layer clips the ghost word but not the cut-out */
 .cv-head{display:grid;gap:12px;max-width:880px;margin-bottom:clamp(24px,3vw,40px)}
@@ -631,11 +631,8 @@ h1[tabindex="-1"]:focus{outline:none}
 /* hero: headline beside a cut-out that steps out of a soft panel */
 .cv-hero{display:grid;grid-template-columns:minmax(0,1fr) clamp(290px,29vw,410px);gap:clamp(28px,4.4vw,72px);align-items:end;padding-bottom:clamp(64px,7.4vw,112px)}
 .cv-hero__txt{min-width:0}
-.cv-hero__fig{position:relative;isolation:isolate;margin:0;height:clamp(380px,32vw,450px);border-radius:var(--r-xl);background:var(--bg-2)}
-.cv-hero__fig img{position:absolute;bottom:0;left:50%;width:auto;height:113%;max-width:none;transform:translateX(-46%);filter:drop-shadow(0 18px 28px rgba(11,11,15,.16));
-  clip-path:inset(-100% -100% 0 -100%)} /* the shadow may spill up and sideways, never below the panel */
-.cv-hero__fig .cv-ghost{left:50%;top:.2em;transform:translateX(-50%);font-size:clamp(84px,8.6vw,124px);color:var(--cv-ghost-hero)}
-.cv-hero__fig .cv-hero__shot{display:none}
+.cv-hero__fig{display:grid;gap:12px;margin:0}
+.cv-hero__fig img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-lg);background:var(--bg-2)}
 .cv-hero__sub{margin-top:12px;font-size:15.5px;line-height:1.7;color:var(--ink-3);max-width:44em}
 
 /* 01 IMAGINE */
@@ -768,9 +765,7 @@ h1[tabindex="-1"]:focus{outline:none}
 }
 @media (max-width:960px){
   .cv-hero{grid-template-columns:minmax(0,1fr);gap:clamp(40px,8vw,64px)}
-  .cv-hero__fig{height:clamp(220px,40vw,300px);margin-top:clamp(28px,6vw,40px)}
-  .cv-hero__fig img{left:auto;right:clamp(16px,8vw,72px);height:118%;transform:none}
-  .cv-hero__fig .cv-ghost{left:clamp(16px,4vw,32px);top:auto;bottom:-.08em;transform:none;font-size:clamp(84px,19vw,150px)}
+  .cv-hero__fig{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:clamp(28px,6vw,40px)}
   .cv-intro,.cv-atoz,.cv-gw{grid-template-columns:minmax(0,1fr)}
   /* the timeline cut-out stands behind the top of the panel, so its lower half never meets the steps */
   .cv-tl{grid-template-columns:minmax(0,1fr)}
@@ -778,10 +773,9 @@ h1[tabindex="-1"]:focus{outline:none}
   .cv-tl__panel{grid-row:2;margin-right:0;padding-right:clamp(22px,3.6vw,52px)}
     }
 @media (max-width:760px){
-  /* phones: a full studio frame reads better than the cut-out at this size */
-  .cv-hero .cv-hero__fig{height:auto;aspect-ratio:1200/664;overflow:hidden}
-  .cv-hero__fig .cv-bg,.cv-hero__fig .cv-hero__cut{display:none}
-  .cv-hero__fig .cv-hero__shot{display:block;position:static;width:100%;height:100%;max-width:100%;object-fit:cover;transform:none;filter:none;clip-path:none}
+  /* phones: one still is enough */
+  .cv-hero__fig{grid-template-columns:minmax(0,1fr)}
+  .cv-hero__fig img + img{display:none}
   .cv-yopd{grid-template-columns:minmax(0,1fr);margin-top:clamp(40px,8vw,56px)}
   .cv-yopd__txt{padding-bottom:0}
   .cv-yopd__fig{justify-self:end;width:clamp(160px,42vw,220px);margin:-8px -4px 0 0}
@@ -799,7 +793,6 @@ h1[tabindex="-1"]:focus{outline:none}
   .cv-dream .cv-ghost{top:auto;bottom:.12em;right:auto;left:-.04em}
 }
 @media (max-width:600px){
-  .cv-hero__fig{height:220px}
   .cv-intro{padding-top:28px}
   .cv-field img{aspect-ratio:3/2}
   .cv-gw__intro{grid-template-columns:64px minmax(0,1fr);gap:14px 16px}
@@ -1771,9 +1764,8 @@ h1[tabindex="-1"]:focus{outline:none}
       <div class="meta"><span class="chip">《요들랜드 TV》 요PD · 기획·제작</span><span class="chip">《관심사원》 · B봇 기획</span><span class="chip">《이홍연의 미디어LAB》 채널 준비 중</span><span class="chip num">2018 –</span></div>
     </div>
     <figure class="cv-hero__fig">
-      <span class="cv-bg" aria-hidden="true"><span class="cv-ghost">YODEL</span></span>
-      <img class="cv-hero__cut" src="assets/img/cv/hero-megaphone.webp" alt="파란 요들 의상에 모자를 쓰고 확성기로 외치는 이홍연" width="545" height="1000" loading="lazy">
-      <img class="cv-hero__shot" src="assets/img/yd-s2-trio.webp" alt="요들 의상을 입고 마이크 앞에 앉아 요들 동작을 따라 하는 이홍연과 출연진, 요들랜드 시즌 2 영상 장면" width="1200" height="664" loading="lazy">
+      <img src="assets/img/yd-s2-trio.webp" alt="요들 의상을 입고 마이크 앞에 앉아 요들 동작을 따라 하는 이홍연과 출연진, 요들랜드 시즌 2 영상 장면" width="1200" height="664" loading="lazy">
+      <img src="assets/img/yd-kingdom.webp" alt="요들왕국 커버 영상 썸네일: 요들 의상을 입고 모인 요들랜드 출연진, 어린이 얼굴은 흐리게 처리" width="960" height="540" loading="lazy">
     </figure>
   </section>
   <section class="wrap" style="padding-bottom:clamp(24px,3vw,40px)">
