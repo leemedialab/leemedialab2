@@ -603,7 +603,7 @@ h1[tabindex="-1"]:focus{outline:none}
 /* 콘텐츠 디렉터: the accolades column beside the hero photo */
 .fb-side{display:grid;gap:16px}
 /* ---------- #yodel creator story (CAREER 03): long-form chapters, classes prefixed cv- ----------
-   A light webzine flavour inside the site's own system: faint outline/ghost words (YODEL, IMAGINE, YO PD, A TO Z, Dream)
+   A light webzine flavour inside the site's own system: faint outline/ghost words (IMAGINE, YO PD, Dream)
    behind the panels, cut-outs that step out of their panels, and the webzine's soft lime used only on the
    production-timeline and B봇 panels and in the ghost words. Every colour is a token redefined for dark. */
 :root{--cv-lime:#E5F3A6;--cv-lime-line:rgba(62,78,0,.17);--cv-ghost:#DCEF80;--cv-outline:rgba(11,11,15,.085);--cv-hand:#47525D;
@@ -626,7 +626,7 @@ h1[tabindex="-1"]:focus{outline:none}
 .cv-ghost--line{color:transparent;-webkit-text-stroke:1.5px var(--cv-outline)}
 .cv-panel{position:relative;isolation:isolate;border-radius:var(--r-xl);background:var(--bg-2)}
 .cv-bg{position:absolute;inset:0;z-index:-1;overflow:hidden;border-radius:inherit;pointer-events:none}
-.cv-yopd__fig,.cv-tl__fig,.cv-anat__fig,.cv-set{margin:0}
+.cv-yopd__fig,.cv-tl__fig,.cv-anat__fig{margin:0}
 
 /* hero: headline beside a cut-out that steps out of a soft panel */
 .cv-hero{display:grid;grid-template-columns:minmax(0,1fr) clamp(290px,29vw,410px);gap:clamp(28px,4.4vw,72px);align-items:end;padding-bottom:clamp(64px,7.4vw,112px)}
@@ -664,15 +664,6 @@ h1[tabindex="-1"]:focus{outline:none}
 .cv-then{margin-top:16px}
 
 /* 04 A TO Z: a fixed light "studio set" (it reads as a photo in both themes), studio notes beside it */
-.cv-atoz{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,3.6vw,56px);align-items:center}
-.cv-set{--cv-ghost:#D6EC74;position:relative;isolation:isolate;overflow:hidden;border-radius:var(--r-xl);padding-top:clamp(40px,5.6vw,84px);background:linear-gradient(180deg,#D2DBE2 0%,#E2E8EC 100%)}
-.cv-set .cv-ghost{left:50%;top:.12em;transform:translateX(-50%);font-size:clamp(84px,11.6vw,176px)}
-.cv-set img{position:relative;width:100%;height:auto}
-.cv-atoz__txt{display:grid;gap:18px;color:var(--ink-2);font-size:16px;line-height:1.75}
-.cv-spec{border-top:1px solid var(--line-2)}
-.cv-spec div{display:grid;grid-template-columns:78px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
-.cv-spec dt{font-size:13px;font-weight:800;color:var(--accent-ink);padding-top:1px}
-.cv-spec dd{font-size:14.5px;color:var(--ink-2);line-height:1.55}
 
 /* the production timeline: a lime panel with the cut-out standing at its right edge */
 .cv-tl{--cv-over:clamp(56px,7vw,112px);position:relative;display:grid;grid-template-columns:minmax(0,1fr) clamp(220px,22%,280px);align-items:end;margin-top:clamp(64px,7vw,104px)}
@@ -756,7 +747,7 @@ h1[tabindex="-1"]:focus{outline:none}
 @media (max-width:960px){
   .cv-hero{grid-template-columns:minmax(0,1fr);gap:clamp(40px,8vw,64px)}
   .cv-hero__fig{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:clamp(28px,6vw,40px)}
-  .cv-intro,.cv-atoz,.cv-gw{grid-template-columns:minmax(0,1fr)}
+  .cv-intro,.cv-gw{grid-template-columns:minmax(0,1fr)}
   /* the timeline cut-out stands behind the top of the panel, so its lower half never meets the steps */
   .cv-tl{grid-template-columns:minmax(0,1fr)}
   .cv-tl__fig{grid-row:1;justify-self:end;width:clamp(150px,27vw,220px);margin:0 clamp(12px,5vw,56px) calc(-1 * clamp(150px,31vw,250px)) 0;z-index:0}
@@ -1854,25 +1845,8 @@ h1[tabindex="-1"]:focus{outline:none}
       </div>
     </div>
 
-    <!-- 04 A TO Z: the one-person studio and the production timeline -->
+    <!-- the M/V production timeline, right after the channel -->
     <div class="block" id="yd-atoz">
-      <div class="cv-head rv"><p class="cv-head__k"><b>04</b></p><h2>모든 걸 직접 하는 1인 제작사</h2><p>2019 말 · 반지하 공간을 고쳐 만든 28평 스튜디오</p></div>
-      <div class="cv-atoz">
-        <figure class="cv-set rv">
-          <span class="cv-ghost" aria-hidden="true">A TO Z</span>
-          <img src="assets/img/cv/atoz-gear.webp" alt="책상 위 스톰트루퍼 헬멧, 짐벌, 미니 삼각대, 캐릭터 마이크, 삼각대에 올린 카메라와 TV 탈 상자 사이에서 웃는 넥타이 차림의 이홍연" width="1400" height="775" loading="lazy">
-        </figure>
-        <div class="cv-atoz__txt rv">
-          <p>카페에서 편집하다 한계를 느껴 6평 남짓한 옥탑방에 노트북과 카메라, 짐벌, 조명, 음향 장비를 하나씩 갖췄습니다. 2019년 말 요들랜드를 본격적으로 시작하면서 28평 스튜디오로 옮겼습니다. 허름한 반지하 공간을 직접 도배하고 방음벽을 붙여 제 작업 방식에 맞게 고쳤습니다.</p>
-          <dl class="cv-spec" aria-label="요PD 스튜디오 장비">
-            <div><dt>촬영</dt><dd>Sony·Canon 카메라, 짐벌, 스마트폰 2대</dd></div>
-            <div><dt>조명</dt><dd>룩스원라이트, 룩스패드 2EA, 레일 조명</dd></div>
-            <div><dt>음향</dt><dd>콘덴서 마이크, 오디오 인터페이스, 모니터링 헤드셋</dd></div>
-            <div><dt>편집</dt><dd>PC, 노트북 4대, 대형 모니터 3대</dd></div>
-            <div><dt>소품·악기</dt><dd>크로마하프, 아코디언, 피아노, 칠판, 이동식 바둑판</dd></div>
-          </dl>
-        </div>
-      </div>
       <div class="cv-tl">
         <div class="cv-tl__panel rv">
           <div class="cv-tl__top">
@@ -1897,9 +1871,9 @@ h1[tabindex="-1"]:focus{outline:none}
       </div>
     </div>
 
-    <!-- 05 ON AIR: broadcast and creator collaborations -->
+    <!-- 04 ON AIR: broadcast and creator collaborations -->
     <div class="block" id="yd-onair">
-      <div class="cv-head rv"><p class="cv-head__k"><b>05</b></p><h2>펭수 무대에서 〈마이 리틀 텔레비전〉 촬영장까지</h2><p>EBS 펭수 · MBC 〈마이 리틀 텔레비전〉 · MBN · tvN · 아프리카TV 도아TV</p></div>
+      <div class="cv-head rv"><p class="cv-head__k"><b>04</b></p><h2>펭수 무대에서 〈마이 리틀 텔레비전〉 촬영장까지</h2><p>EBS 펭수 · MBC 〈마이 리틀 텔레비전〉 · MBN · tvN · 아프리카TV 도아TV</p></div>
       <div class="cv-onair">
         <div class="card cv-onair__txt rv">
           <p>펭수 초창기 홍대 공연을 함께한 인연으로 요들랜드 팀이 MBC 〈마이 리틀 텔레비전〉에 나갔고, 저는 촬영장 비하인드를 찍었습니다. 개그맨과의 콜라보 방송, 아프리카TV 도아TV 합방도 이어졌습니다.</p>
@@ -1911,9 +1885,9 @@ h1[tabindex="-1"]:focus{outline:none}
       </div>
     </div>
 
-    <!-- 06 B-BOT: the company comedy pilot and the character he built -->
+    <!-- 05 B-BOT: the company comedy pilot and the character he built -->
     <div class="block" id="yd-gwansim">
-      <div class="cv-head rv"><p class="cv-head__k"><b>06</b></p><h2>'관심사원'과 세계 최초 인간형 IPTV 'B봇'</h2><p>2020 · 회사 유튜브 예능 기획 · 채널 공개는 코로나19로 보류</p></div>
+      <div class="cv-head rv"><p class="cv-head__k"><b>05</b></p><h2>'관심사원'과 세계 최초 인간형 IPTV 'B봇'</h2><p>2020 · 회사 유튜브 예능 기획 · 채널 공개는 코로나19로 보류</p></div>
       <div class="cv-gw">
         <div class="card cv-gw__intro rv">
           <img class="cv-gw__icon" src="assets/img/cv/gwansim-icon.webp" alt="관심사원 채널 아이콘: 관심사원 로고 옆에서 사원증을 건 셔츠 차림으로 웃는 이홍연" width="480" height="480" loading="lazy">
@@ -1961,12 +1935,12 @@ h1[tabindex="-1"]:focus{outline:none}
       </div>
     </div>
 
-    <!-- 07 DREAM: closing -->
+    <!-- 06 DREAM: closing -->
     <div class="block" id="yd-dream">
       <div class="cv-panel cv-dream rv">
         <span class="cv-bg" aria-hidden="true"><span class="cv-ghost">Dream</span></span>
         <div class="cv-dream__txt">
-          <p class="cv-head__k"><b>07</b></p>
+          <p class="cv-head__k"><b>06</b></p>
           <h2>꿈꾸는 대로,<br>무한한 세계를<br>만들어 나가는 것</h2>
           <p>요들러가 되고 싶었지만 먼저 요PD가 되었습니다. 그렇다고 요들러의 꿈을 접은 적은 없습니다.</p>
           <p class="cv-dream__now">그다음 장이 요들랜드 시즌 2, 그리고 준비 중인 《이홍연의 미디어LAB》입니다.</p>
@@ -1977,7 +1951,7 @@ h1[tabindex="-1"]:focus{outline:none}
     <div class="block">
       <div class="block-title"><h2>《이홍연의 미디어LAB》</h2><p>채널 오픈 준비 중</p></div>
       <article class="card case rv">
-        <figure class="media case__media" style="aspect-ratio:16/9"><img src="assets/img/home-medialab.webp" alt="《이홍연의 미디어LAB》 개인 스튜디오 촬영 세트에 선 이홍연" width="1400" height="787" loading="lazy"><span class="go go--soon">채널 준비 중</span></figure>
+        <figure class="media case__media" style="aspect-ratio:16/9"><img src="assets/img/medialab-ep.webp" alt="《이홍연의 미디어LAB》 영상 장면: 화면에 논문을 띄워 놓고 설명하는 이홍연" width="1400" height="788" loading="lazy"><span class="go go--soon">채널 준비 중</span></figure>
         <div class="case__body">
           <span class="case__tag">준비 중 <span>2026</span></span>
           <h3>미디어 산업의 이슈와<br>트렌드를 다룹니다</h3>
