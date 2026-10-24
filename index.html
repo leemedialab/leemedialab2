@@ -143,8 +143,8 @@ figure{margin:0}
 @keyframes pulse{50%{box-shadow:0 0 0 7px transparent}}
 .chip{display:inline-flex;align-items:center;height:30px;padding:0 12px;border-radius:999px;background:var(--bg-2);font-size:13.5px;font-weight:600;color:var(--ink-2);white-space:nowrap}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(22px,2.4vw,32px);min-width:0}
-.card--soft{background:var(--bg-2);border-color:transparent}
 .media{position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--bg-3)}
 .media img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
 a.media:hover img,.hoverzoom:hover .media img{transform:scale(1.04)}
@@ -1017,10 +1017,6 @@ h1[tabindex="-1"]:focus{outline:none}
 .prog__meta dd{margin-top:6px;font-size:15px;font-weight:600;line-height:1.55;letter-spacing:-.02em}
 .prog__meta .chip{background:var(--card)}
 .prog__wide{grid-column:1/-1}
-.info3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.info3 .card{display:flex;gap:16px;align-items:flex-start}
-.info3 b{display:block;font-size:13px;font-weight:800;color:var(--accent-ink)}
-.info3 p{margin-top:4px;font-size:15px;font-weight:600;line-height:1.55;letter-spacing:-.02em}
 
 /* AI pipeline map (program 02) */
 .aiflow{display:grid;gap:16px;padding:clamp(16px,2.2vw,26px);border-radius:22px;background:var(--bg-2)}
@@ -1166,8 +1162,7 @@ h1[tabindex="-1"]:focus{outline:none}
   .portrait{justify-self:start;max-width:440px}
   .speaker__photo{position:static}
   .speaker__photo .media{aspect-ratio:16/11}
-  .feats,.three,.gallery,.info3{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .feats > :last-child,.info3 > :last-child{grid-column:1/-1}
+  .feats,.three,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
   .four,.flow4,.ask{grid-template-columns:repeat(2,minmax(0,1fr))}
   .flow4 li::after{display:none}
   .case{grid-template-columns:minmax(0,1fr)}
@@ -1196,8 +1191,7 @@ h1[tabindex="-1"]:focus{outline:none}
   .yside{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:600px){
-  .feats,.three,.gallery,.info3,.four,.flow4,.ask,.two,.steps{grid-template-columns:minmax(0,1fr)}
-  .feats > :last-child,.info3 > :last-child{grid-column:auto}
+  .feats,.three,.gallery,.four,.flow4,.ask,.two,.steps{grid-template-columns:minmax(0,1fr)}
   .bento{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .stat{min-height:170px;gap:18px}
   .stat__ic{display:none}
@@ -2134,17 +2128,10 @@ h1[tabindex="-1"]:focus{outline:none}
 <div class="view" id="lectures" data-label="강의 콘텐츠">
   <section class="wrap phero" aria-labelledby="lec-title">
     <div class="crumb"><b>LECTURES</b><span>강의 콘텐츠</span></div>
-    <h1 class="h-1" id="lec-title">직접 만든 사례와 데이터로<br><span class="grad">7개 프로그램</span>을 편성했습니다</h1>
-    <p class="lead">AI가 콘텐츠를 고르는 시대, 개인과 기업이 무엇을 바꿔야 하는지 다룹니다.</p>
+    <h1 class="sr-only" id="lec-title">강의 콘텐츠</h1>
   </section>
   <section class="wrap" style="padding-bottom:clamp(24px,3vw,40px)">
-    <div class="info3">
-      <div class="card card--soft"><span class="icard__ic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><div><b>대상</b><p>기업 임직원(마케팅·홍보·영업·신입), 경영진, 공공기관, 대학·대학원</p></div></div>
-      <div class="card card--soft"><span class="icard__ic"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg></span><div><b>방식</b><p>오프라인·온라인 특강, 실습 워크숍, 2~4회 연속 과정</p></div></div>
-      <div class="card card--soft"><span class="icard__ic"><svg class="ic" aria-hidden="true"><use href="#i-layout"/></svg></span><div><b>구성</b><p>교육 목적과 인원에 맞춰 프로그램을 조합하고 사례를 바꿉니다</p></div></div>
-    </div>
-
-    <div style="margin-top:clamp(40px,5vw,64px)">
+    <div>
     <article class="card prog rv" id="lec-01">
       <div>
         <div class="prog__top"><span class="prog__no">PROGRAM 01</span><span class="prog__label">디지털 플랫폼 / 검색 최적화(GEO) 실무</span></div>
