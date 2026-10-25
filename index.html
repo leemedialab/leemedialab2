@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>이홍연 강사 프로필</title>
+<title>이홍연 포트폴리오</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="AI-Native 콘텐츠 디렉터·MC 이홍연의 기업 강의 프로필. GEO·AI 검색, AI 콘텐츠 제작, 유튜브·숏폼 기획, 미디어·플랫폼 비즈니스 강의.">
+<meta name="description" content="AI-Native 콘텐츠 디렉터·MC 이홍연의 포트폴리오. 방송 MC·디렉터, AI-Native 콘텐츠 제작, 유튜브 채널 기획, 콘텐츠 마케팅, ICT 컨설팅, 미디어·플랫폼 산업 연구.">
 <link rel="canonical" href="https://leemedialab.github.io/leemedialab2/">
 <meta name="robots" content="noindex">
 <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="64x64">
@@ -13,9 +13,9 @@
 <meta name="theme-color" content="#0B0B0F">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://leemedialab.github.io/leemedialab2/">
-<meta property="og:title" content="이홍연 | AI-Native 콘텐츠 디렉터 · MC · 기업 강사">
-<meta property="og:description" content="AI-Native로 제작하고, 미디어 산업을 연구하며 직접 알리고 진행합니다. 미디어·플랫폼 산업, AI 콘텐츠 제작, 유튜브·SNS 전략, GEO·AI 검색 강의.">
-<meta property="og:image" content="https://leemedialab.github.io/assets/img/og.jpg?v=20261025b">
+<meta property="og:title" content="이홍연 | AI-Native 콘텐츠 디렉터 · MC · 미디어/플랫폼산업 연구">
+<meta property="og:description" content="AI-Native로 제작하고, 미디어 산업을 연구하며 직접 알리고 진행합니다. 방송 MC·디렉터, AI-Native 제작, 유튜브 채널 기획, 콘텐츠 마케팅, ICT 컨설팅 경력.">
+<meta property="og:image" content="https://leemedialab.github.io/leemedialab2/assets/img/og.jpg?v=20261025j">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
@@ -247,9 +247,11 @@ h1[tabindex="-1"]:focus{outline:none}
   .bar .bar__in{padding-top:10px;gap:4px 16px}
   .bar .menu{margin:0 calc(var(--gut-r) * -1) 0 calc(var(--gut) * -1);border-top:1px solid var(--line)}
   .bar .menu__scroll{overflow:visible;padding-bottom:0;-webkit-mask-image:none;mask-image:none}
-  .bar .menu__list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;min-width:0;padding:8px var(--gut-r) 10px var(--gut)}
+  .bar .menu__list{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px;min-width:0;padding:8px var(--gut-r) 10px var(--gut)}
   .bar .menu__list::after,.bar .menu__sep,.bar .menu__list .dot{display:none}
-  .bar .menu__list li{min-width:0}
+  /* seven tabs: four on the first row, the last three share the second */
+  .bar .menu__list li{min-width:0;grid-column:span 3}
+  .bar .menu__list li:nth-last-child(-n+3){grid-column:span 4}
   .bar .menu__list a{height:100%;min-height:44px;padding:5px 4px;justify-content:center;border-radius:10px;background:var(--bg-2);text-align:center;white-space:normal;word-break:keep-all;font-size:12.5px;line-height:1.25;letter-spacing:-.03em;color:var(--ink-2)}
   .bar .menu__list a:hover{background:var(--bg-3);color:var(--ink)}
   .bar .menu__list a[aria-current="page"]{background:var(--ink);color:var(--bg);font-weight:700}
@@ -348,7 +350,7 @@ h1[tabindex="-1"]:focus{outline:none}
 .sig b{font-size:20px;font-weight:800;letter-spacing:-.04em}
 .sig span{font-size:14px;color:var(--ink-3);font-weight:600}
 .sig i{width:1px;height:18px;background:var(--line-2)}
-.hero__cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.hero .contact-row{margin-top:30px}
 .portrait{position:relative;max-width:520px;width:100%;justify-self:end}
 .portrait .media{aspect-ratio:4/5;border-radius:var(--r-xl);background:#E3DFE2;box-shadow:var(--shadow)}
 .portrait .media img{object-position:50% 22%}
@@ -1275,8 +1277,6 @@ h1[tabindex="-1"]:focus{outline:none}
           <li><a href="#marketing">콘텐츠 마케터</a></li>
           <li><a href="#ict">ICT 컨설턴트</a></li>
           <li><a href="#yonsei">연세대 정보대학원</a></li>
-          <li class="menu__sep" aria-hidden="true"></li>
-          <li><a href="#lectures">강의 콘텐츠<span class="dot" aria-hidden="true"></span></a></li>
         </ul>
       </div>
     </nav>
@@ -1302,9 +1302,6 @@ h1[tabindex="-1"]:focus{outline:none}
         <h1 class="h-display" id="hero-title">AI-Native로 제작하고,<br><span class="grad">미디어 산업</span>을 연구하며<br>직접 알리고 진행합니다.</h1>
         <p class="lead">통신 네트워크 컨설턴트부터 60만 구독자 규모의 유료방송·유튜브 오리지널 채널 기획과 <strong>메인 MC</strong>, AI 검색(GEO) 및 AI Native 콘텐츠 제작까지 미디어·ICT 생태계 전반을 아우르는 실무형 디렉터입니다.</p>
         <div class="sig"><b>이홍연</b><i></i><span>Hongyeon Lee</span><i></i><span>SK브로드밴드(8년) · Chainshift AI · 연세대 정보대학원(콘텐츠·플랫폼 비즈니스)</span></div>
-        <div class="hero__cta">
-          <a class="btn" href="#lectures">강의 프로그램 보기 <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </div>
         <div class="contact-row" role="group" aria-label="연락처">
           <span class="cpill"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:01073681377">010-7368-1377</a><button class="copy" type="button" data-copy="010-7368-1377" aria-label="전화번호 복사">복사</button></span>
           <span class="cpill"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:leemedialab@gmail.com">leemedialab@gmail.com</a><button class="copy" type="button" data-copy="leemedialab@gmail.com" aria-label="이메일 주소 복사">복사</button></span>
@@ -1389,7 +1386,7 @@ h1[tabindex="-1"]:focus{outline:none}
   <section class="sec" aria-labelledby="why-title">
     <div class="wrap">
       <div class="head">
-        <h2 class="h-2" id="why-title">남의 사례보다 경험을 강의합니다</h2>
+        <h2 class="h-2" id="why-title">남의 사례보다 경험으로 일합니다</h2>
       </div>
       <div class="feats">
         <article class="card feat hoverzoom rv">
@@ -1432,25 +1429,6 @@ h1[tabindex="-1"]:focus{outline:none}
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="prog-title">
-    <div class="wrap">
-      <div class="rail-head">
-        <div class="head">
-          <h2 class="h-2" id="prog-title">강의 콘텐츠</h2>
-        </div>
-        <div class="rail-btns"><button type="button" id="railPrev" aria-label="이전 강의"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg></button><button type="button" id="railNext" aria-label="다음 강의"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
-      </div>
-      <div class="rail" id="rail" style="margin-top:32px">
-        <a class="card lcard" href="#lec-01"><div class="lcard__no"><b>01</b><span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></div><h3>OTT·영화·방송 등 미디어 산업 트렌드 및 플랫폼 비즈니스</h3><p>유료방송·OTT·유튜브의 수익 구조와 경쟁 구도</p></a>
-        <a class="card lcard" href="#lec-02"><div class="lcard__no"><b>02</b><span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></div><h3>AI Native 콘텐츠 제작 워크플로우</h3><p>소재 기획부터 생성형 AI 제작 → SNS 채널 배포·자동화까지</p></a>
-        <a class="card lcard" href="#lec-03"><div class="lcard__no"><b>03</b><span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></div><h3>뉴미디어 콘텐츠 제작 및 유튜브 등 콘텐츠 기획</h3><p>주제 선정부터 후킹, 출연, 썸네일, 데이터 분석까지</p></a>
-        <a class="card lcard" href="#lec-04"><div class="lcard__no"><b>04</b><span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></div><h3>SNS 시장 이해와 트렌드, 콘텐츠 전략</h3><p>플랫폼별 시장 구조를 읽고 우리 채널 운영으로 옮기기</p></a>
-        <a class="card lcard" href="#lec-05"><div class="lcard__no"><b>05</b><span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></div><h3>디지털 마케팅 및 B2B/B2C 콘텐츠 브랜딩·바이럴 전략</h3><p>직원이 만드는 진성 콘텐츠와 성과형 콘텐츠</p></a>
-        <a class="card lcard" href="#lec-06"><div class="lcard__no"><b>06</b><span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></div><h3>ICT·네트워크 인프라와 미디어 유통 구조의 이해</h3><p>통신·네트워크 진화에 따른 미디어 플랫폼 비즈니스 모델</p></a>
-        <a class="card lcard" href="#lec-07"><div class="lcard__no"><b>07</b><span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></div><h3>디지털 플랫폼 / 검색 최적화(GEO) 실무</h3><p>AI 에이전트와 미디어 플랫폼 생태계 변화</p></a>
-      </div>
-    </div>
-  </section>
 </div>
 
 <!-- =================================================================== CH01 PD -->
@@ -1547,7 +1525,6 @@ h1[tabindex="-1"]:focus{outline:none}
       </div>
       <p class="note">SKT T팩토리에서 열린 B tv 오프라인 행사 '콘썰트'에서 '파이아키아 홍연 매니저의 영화人터뷰' 3부작을 진행했습니다.</p>
     </div>
-    <div class="related"><a href="#lec-03"><b>관련 강의 03</b>뉴미디어 콘텐츠 제작 및 유튜브 등 콘텐츠 기획</a></div>
   </section>
 </div>
 
@@ -1700,7 +1677,6 @@ h1[tabindex="-1"]:focus{outline:none}
         </div>
       </div>
     </div>
-    <div class="related"><a href="#lec-02"><b>관련 강의 02</b>AI Native 콘텐츠 제작 워크플로우</a><a href="#lec-07"><b>관련 강의 07</b>디지털 플랫폼 / 검색 최적화(GEO) 실무</a></div>
   </section>
 </div>
 
@@ -1931,7 +1907,6 @@ h1[tabindex="-1"]:focus{outline:none}
         <figure class="thumb"><img src="assets/img/ml/drama.webp" alt="썸네일: 주연배우들만 빌딩 쇼핑, 드라마·영화 업계 양극화" width="1280" height="720" loading="lazy"></figure>
       </div>
     </div>
-    <div class="related"><a href="#lec-03"><b>관련 강의 03</b>뉴미디어 콘텐츠 제작 및 유튜브 등 콘텐츠 기획</a><a href="#lec-04"><b>관련 강의 04</b>SNS 시장 이해와 트렌드, 콘텐츠 전략</a></div>
   </section>
 </div>
 
@@ -1984,7 +1959,6 @@ h1[tabindex="-1"]:focus{outline:none}
         </div>
       </article>
     </div>
-    <div class="related"><a href="#lec-04"><b>관련 강의 04</b>SNS 시장 이해와 트렌드, 콘텐츠 전략</a><a href="#lec-05"><b>관련 강의 05</b>디지털 마케팅 및 B2B/B2C 콘텐츠 브랜딩·바이럴 전략</a></div>
   </section>
 </div>
 
@@ -2030,7 +2004,6 @@ h1[tabindex="-1"]:focus{outline:none}
         <figure class="rv"><a class="media golink" style="aspect-ratio:16/10" href="https://www.skcareersjournal.com/1664" target="_blank" rel="noopener" aria-label="SK Careers Journal 기사 「[작전명] SKB B2B」 새 창으로 보기"><img src="assets/img/ict-careers.webp" alt="SK Careers Journal에 소개된 AM 이홍연" width="1383" height="774" loading="lazy"><span class="go"><svg class="ic" aria-hidden="true"><use href="#i-out"/></svg>기사 보기</span></a><figcaption class="cap">SK Careers Journal 「[작전명] SKB B2B」 현직자 인터뷰 · 2020.01.24</figcaption></figure>
       </div>
     </div>
-    <div class="related"><a href="#lec-06"><b>관련 강의 06</b>ICT·네트워크 인프라와 미디어 유통 구조의 이해</a></div>
   </section>
 </div>
 
@@ -2123,286 +2096,20 @@ h1[tabindex="-1"]:focus{outline:none}
         <li>Between commerciality and authenticity: The Imaginary of Social Media Influencers in the Platform Economy</li>
       </ul>
     </div>
-    <div class="related"><a href="#lec-01"><b>관련 강의 01</b>OTT·영화·방송 등 미디어 산업 트렌드 및 플랫폼 비즈니스</a><a href="#lec-07"><b>관련 강의 07</b>디지털 플랫폼 / 검색 최적화(GEO) 실무</a></div>
   </section>
 </div>
 
-<!-- =================================================================== LECTURES -->
-<div class="view" id="lectures" data-label="강의 콘텐츠">
-  <section class="wrap phero" aria-labelledby="lec-title">
-    <div class="crumb"><b>LECTURES</b><span>강의 콘텐츠</span></div>
-    <h1 class="sr-only" id="lec-title">강의 콘텐츠</h1>
-  </section>
-  <section class="wrap" style="padding-bottom:clamp(24px,3vw,40px)">
-    <div>
-    <article class="card prog rv" id="lec-01">
-      <div>
-        <div class="prog__top"><span class="prog__no">PROGRAM 01</span></div>
-        <h3 class="prog__label">OTT·영화·방송 등 미디어 산업 트렌드 및 플랫폼 비즈니스</h3>
-        <p class="prog__sub">유료방송·OTT·유튜브의 수익 구조와 경쟁 구도</p>
-        <ul class="curr">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>IPTV 사업자 안에서 본 유료방송의 수익 구조와 OTT와의 관계</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>OTT 복수 구독과 멀티호밍, 플랫폼 경쟁을 가르는 변수</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>영화 흥행과 콘텐츠 IP 거래, 제작비 구조의 변화</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>예능·드라마 업계 이슈로 읽는 플랫폼 비즈니스</li>
-        </ul>
-      </div>
-      <dl class="prog__meta"><div><dt>추천 대상</dt><dd>미디어·콘텐츠 기업 임직원, 경영진, 대학(원)생</dd></div><div><dt>형식</dt><dd>특강 60~120분</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">OTT</span><span class="chip">유료방송</span><span class="chip">플랫폼 경제</span></dd></div></dl>
-    </article>
-
-    <article class="card prog rv" id="lec-02">
-      <div>
-        <div class="prog__top"><span class="prog__no">PROGRAM 02</span></div>
-        <h3 class="prog__label">AI Native 콘텐츠 제작 워크플로우</h3>
-        <p class="prog__sub">소재 기획부터 생성형 AI 제작 → SNS 채널 배포·자동화까지</p>
-        <ul class="curr">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>이슈 레이더: 24~72시간 안의 업계 이슈를 AI로 훑어 소재 고르기</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>내 말투를 학습시킨 AI 대본, 받아쓰기와 컷 편집 자동화</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>생성형 이미지·코드 기반 모션그래픽으로 편집 시간 줄이기</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>9:16·16:9 채널별 변환과 배포 자동화, 팀 단위로 넓히는 법</li>
-        </ul>
-      </div>
-      <dl class="prog__meta"><div><dt>추천 대상</dt><dd>콘텐츠 실무자, 1인 크리에이터, 소규모 마케팅팀</dd></div><div><dt>형식</dt><dd>실습 워크숍 3~4시간 · 연속 과정</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">생성형 AI</span><span class="chip">자동화</span><span class="chip">1인 제작</span></dd></div></dl>
-
-      <div class="prog__wide">
-        <details class="aiflow aiflow--fold">
-          <summary class="aiflow__top">
-            <h4>운영 중인 AI 콘텐츠 제작·배포 파이프라인 <span class="fold-hint"><span class="fold-hint__open">(클릭)</span><span class="fold-hint__close">(접기)</span></span></h4>
-            <p>9단계 · 사람은 판단과 승인만</p>
-          </summary>
-          <div class="aiflow__body">
-          <div class="brain is-dark">
-            <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg></span>
-            <div><b>Claude · 두뇌와 지휘</b><p>기획·대본·작업 지휘는 Claude가 맡습니다.</p></div>
-            <ul>
-              <li>Claude 데스크톱 앱 Code 탭(관제탑)</li>
-              <li>Claude Code CLI</li>
-              <li>Skills + CLAUDE.md(브랜드 규칙)</li>
-              <li>Routines(예약 실행)</li>
-              <li>Opus 기본 · Sonnet·Haiku 분담</li>
-              <li class="x">ChatGPT 교차 검토</li>
-            </ul>
-          </div>
-          <div class="track">
-            <span class="track__label">기획 · 제작</span>
-            <ol class="nodes" style="--n:5;--start:0">
-              <li class="node">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span><b>소재 발굴</b></div>
-                <ul class="tools">
-                  <li><span>국내외 뉴스(Google 뉴스·Claude 검색)</span><i class="tg">API</i></li>
-                  <li><span>네이버 뉴스·블로그·카페·데이터랩</span><i class="tg tg--cmcp">MCP</i></li>
-                  <li><span>Pint(뜨는 쇼츠·채널)</span><i class="tg tg--br">브라우저</i></li>
-                  <li><span>YouTube API(한국 AI 채널 급상승)</span><i class="tg tg--cmcp">MCP</i></li>
-                </ul>
-                <p class="cand"><em>도입 검토</em><span>vidIQ</span><span>Trends MCP</span></p>
-                <p class="who">자동 수집 → <b>사람이 채택</b></p>
-              </li>
-              <li class="node">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/></svg></span><b>기획·대본</b></div>
-                <ul class="tools">
-                  <li><span>Claude 데스크톱 앱(Code 탭)</span><i class="tg tg--nat">내장</i></li>
-                  <li><span>스킬(반복 작업 명령)</span><i class="tg tg--nat">내장</i></li>
-                  <li><span>ChatGPT 크로스체크(Codex)</span><i class="tg">API</i></li>
-                </ul>
-                <span></span>
-                <p class="who">자동 초안 → <b>사람 승인</b></p>
-              </li>
-              <li class="node">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 2.5-2.5L20 17"/></svg></span><b>이미지·영상 생성</b></div>
-                <ul class="tools">
-                  <li><span>Higgsfield</span><i class="tg tg--mcp">MCP</i></li>
-                  <li><span>Google Flow(Veo·Nano Banana)</span><i class="tg tg--br">브라우저</i></li>
-                  <li><span>ChatGPT 이미지(Codex MCP)</span><i class="tg tg--cmcp">MCP</i></li>
-                </ul>
-                <span></span>
-                <p class="who">샷리스트·견적 → <b>사람 승인</b> → 생성</p>
-              </li>
-              <li class="node">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 10h17M8 5l2 5M13 5l2 5M18 5l2 5"/></svg></span><b>조립</b></div>
-                <ul class="tools">
-                  <li><span>HyperFrames(코드로 만드는 영상)</span><i class="tg">API</i></li>
-                  <li><span>Selects(원본 러프컷)</span><i class="tg tg--mcp">MCP</i></li>
-                  <li><span>타임라인 파일(OTIO)</span><i class="tg">API</i></li>
-                </ul>
-                <span></span>
-                <p class="who">자동 컷·렌더 → <b>사람이 미리보기 승인</b></p>
-              </li>
-              <li class="node">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1.5"/><rect x="13" y="3.5" width="7.5" height="7.5" rx="1.5"/><rect x="3.5" y="13" width="7.5" height="7.5" rx="1.5"/><rect x="13" y="13" width="7.5" height="7.5" rx="1.5"/></svg></span><b>썸네일·카드뉴스</b></div>
-                <ul class="tools">
-                  <li><span>Higgsfield(배경 이미지)</span><i class="tg tg--mcp">MCP</i></li>
-                  <li><span>제품·UI/UX 이미지</span><i class="tg tg--nat">내장</i></li>
-                  <li><span>ChatGPT 이미지(Codex MCP)</span><i class="tg tg--cmcp">MCP</i></li>
-                  <li><span>브랜드 썸네일 템플릿</span><i class="tg">API</i></li>
-                  <li><span>Claude Design(카드뉴스·디자인 시안)</span><i class="tg tg--nat">내장</i></li>
-                </ul>
-                <p class="cand"><em>도입 검토</em><span>Mirra</span><span>Adobe 커넥터</span></p>
-                <p class="who">자동 시안 → <b>사람이 선택</b></p>
-              </li>
-            </ol>
-          </div>
-          <div class="track">
-            <span class="track__label">마감 · 배포</span>
-            <ol class="nodes" style="--n:4;--start:5">
-              <li class="node node--human">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15.5 11.5l2 2 4-4"/></svg></span><b>마무리</b></div>
-                <ul class="tools">
-                  <li><span>Premiere Pro</span><i class="tg tg--cmcp">MCP</i></li>
-                  <li><span>Photoshop</span><i class="tg tg--cmcp">MCP</i></li>
-                </ul>
-                <span></span>
-                <p class="who"><i>사람</i>Claude 반복 작업 → <b>사람이 마감</b></p>
-              </li>
-              <li class="node">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 9.5v5l4-2.5z"/></svg></span><b>쇼츠 자동 생성</b></div>
-                <ul class="tools">
-                  <li><span>Claude 하이라이트 선정</span><i class="tg tg--nat">내장</i></li>
-                  <li><span>Selects(하이라이트·쇼츠 추출)</span><i class="tg tg--mcp">MCP</i></li>
-                  <li><span>RTZR(한국어 받아쓰기)</span><i class="tg">API</i></li>
-                  <li><span>HyperFrames(세로 자막)</span><i class="tg">API</i></li>
-                </ul>
-                <p class="cand"><em>도입 검토</em><span>OpusClip</span><span>CapCut</span></p>
-                <p class="who">자동 → <b>사람이 하이라이트 승인</b></p>
-              </li>
-              <li class="node">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 20 19v-3"/></svg></span><b>업로드</b></div>
-                <ul class="tools">
-                  <li><span>ego(AI 브라우저)</span><i class="tg tg--br">브라우저</i></li>
-                  <li><span>n8n(DM·기록·알림 자동화)</span><i class="tg tg--mcp">MCP</i></li>
-                  <li><span>Buffer(회사 페이지·인스타 예약)</span><i class="tg tg--mcp">MCP</i></li>
-                </ul>
-                <p class="cand"><em>도입 검토</em><span>Mirra</span><span>ManyChat</span><span>Metricool</span></p>
-                <p class="who">비공개 예약 업로드 → <b>사람이 공개</b></p>
-              </li>
-              <li class="node">
-                <div class="node__head"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/></svg></span><b>전사 → 블로그·링크드인</b></div>
-                <ul class="tools">
-                  <li><span>YouTube 자막 가져오기</span><i class="tg">API</i></li>
-                  <li><span>Claude 블로그 변환</span><i class="tg tg--nat">내장</i></li>
-                  <li><span>Framer(회사 블로그)</span><i class="tg">API</i></li>
-                  <li><span>네이버 블로그</span><i class="tg tg--br">브라우저</i></li>
-                </ul>
-                <p class="cand"><em>도입 검토</em><span>Mirra</span></p>
-                <p class="who">자동 초안 → <b>사람이 발행</b></p>
-              </li>
-            </ol>
-          </div>
-          <div class="legend" role="group" aria-label="연결 방식 범례">
-            <span><i class="tg tg--nat">내장</i>Claude 기본 기능</span>
-            <span><i class="tg tg--mcp">MCP</i>공식 MCP·커넥터</span>
-            <span><i class="tg tg--cmcp">MCP</i>커뮤니티·사내 MCP</span>
-            <span><i class="tg">API</i>API·스크립트</span>
-            <span><i class="tg tg--br">브라우저</i>브라우저 자동화</span>
-          </div>
-          </div>
-        </details>
-      </div>
-    </article>
-
-    <article class="card prog rv" id="lec-03">
-      <div>
-        <div class="prog__top"><span class="prog__no">PROGRAM 03</span></div>
-        <h3 class="prog__label">뉴미디어 콘텐츠 제작 및 유튜브 등 콘텐츠 기획</h3>
-        <p class="prog__sub">주제 선정부터 후킹, 출연, 썸네일, 데이터 분석까지</p>
-        <ul class="curr">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>클릭을 부르는 주제·제목·썸네일, 감이 아니라 데이터로 고르는 법</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>검증된 공식 2/3, 새로운 실험 1/3: 시리즈 포맷 설계</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>인하우스 제작팀을 꾸리고 운영하는 법</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>출연자로서의 진행 노하우와 다음 기획을 정하는 성과 분석</li>
-        </ul>
-      </div>
-      <dl class="prog__meta"><div><dt>추천 대상</dt><dd>기업 채널 담당자, 신입·주니어 마케터, 대학(원)생</dd></div><div><dt>형식</dt><dd>특강 90~120분 · 기획 워크숍</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">유튜브</span><span class="chip">채널 기획</span><span class="chip">인하우스 제작</span></dd></div></dl>
-    </article>
-
-    <article class="card prog rv" id="lec-04">
-      <div>
-        <div class="prog__top"><span class="prog__no">PROGRAM 04</span></div>
-        <h3 class="prog__label">SNS 시장 이해와 트렌드, 콘텐츠 전략</h3>
-        <p class="prog__sub">플랫폼별 시장 구조를 읽고 우리 채널 운영으로 옮기기</p>
-        <ul class="curr">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>SNS 시장 지형: 유튜브·틱톡·인스타그램의 이용자와 추천 방식은 어떻게 다른가</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>숏폼이 바꾼 시청 습관, 롱폼과 숏폼을 함께 운영하는 채널 전략</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>사례: 광고비 0원 틱톡 58편 1,960만 회, 파일럿 1,300회에서 무엇을 바꿨나</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>실습: 우리 브랜드 채널을 진단하고 플랫폼별 콘텐츠 전략 짜기</li>
-        </ul>
-      </div>
-      <dl class="prog__meta"><div><dt>추천 대상</dt><dd>SNS·브랜드 마케터, 홍보팀, 공공기관 SNS 담당자</dd></div><div><dt>형식</dt><dd>특강 60~90분 · 채널 진단 워크숍</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">SNS 트렌드</span><span class="chip">숏폼</span><span class="chip">콘텐츠 전략</span></dd></div></dl>
-    </article>
-
-    <article class="card prog rv" id="lec-05">
-      <div>
-        <div class="prog__top"><span class="prog__no">PROGRAM 05</span></div>
-        <h3 class="prog__label">디지털 마케팅 및 B2B/B2C 콘텐츠 브랜딩·바이럴 전략</h3>
-        <p class="prog__sub">직원이 만드는 진성 콘텐츠와 성과형 콘텐츠</p>
-        <ul class="curr">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>직원이 브랜드의 얼굴이 되는 임플로이언서 전략과 운영 리스크</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>상품별 IMC 캠페인: 메시지 전략부터 연간 프로모션 로드맵까지</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>라이브커머스·중간광고처럼 성과로 이어지는 콘텐츠 설계</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>B2B와 B2C, 고객이 다르면 메시지도 다르다</li>
-        </ul>
-      </div>
-      <dl class="prog__meta"><div><dt>추천 대상</dt><dd>B2B·B2C 마케팅팀, 영업·기획 조직</dd></div><div><dt>형식</dt><dd>특강 90분 · 사례 워크숍</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">브랜딩</span><span class="chip">IMC</span><span class="chip">임플로이언서</span></dd></div></dl>
-    </article>
-
-    <article class="card prog rv" id="lec-06">
-      <div>
-        <div class="prog__top"><span class="prog__no">PROGRAM 06</span></div>
-        <h3 class="prog__label">ICT·네트워크 인프라와 미디어 유통 구조의 이해</h3>
-        <p class="prog__sub">통신·네트워크 진화에 따른 미디어 플랫폼 비즈니스 모델</p>
-        <ul class="curr">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>전용회선·IPTV·5G, 비전공자도 이해하는 미디어 유통의 길</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>통신사가 콘텐츠와 플랫폼에 투자하는 이유, 결합상품의 경제학</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>망 사용료와 통신사·콘텐츠 사업자 갈등, 다음 세대 네트워크의 쟁점</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>AI 크롤러와 robots.txt: 네트워크 관점으로 보는 AI 검색</li>
-        </ul>
-      </div>
-      <dl class="prog__meta"><div><dt>추천 대상</dt><dd>통신·IT 기업 신입, 비전공 직무 전환자, 공공기관</dd></div><div><dt>형식</dt><dd>특강 60~90분</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">네트워크</span><span class="chip">IPTV</span><span class="chip">망 사용료</span></dd></div></dl>
-    </article>
-
-    <article class="card prog rv" id="lec-07">
-      <div>
-        <div class="prog__top"><span class="prog__no">PROGRAM 07</span></div>
-        <h3 class="prog__label">디지털 플랫폼 / 검색 최적화(GEO) 실무</h3>
-        <p class="prog__sub">AI 에이전트와 미디어 플랫폼 생태계 변화</p>
-        <ul class="curr">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>링크 목록에서 'AI의 답변'으로: SEO에서 GEO·AEO로 바뀌는 검색의 규칙</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>같은 질문에도 매번 다른 답, AI 답변 속 브랜드 가시성을 KPI로 관리하는 법</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>AI 에이전트가 영상과 브랜드를 대신 고르는 시대, 플랫폼 생태계는 어떻게 바뀌나</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>실습: 우리 브랜드를 ChatGPT·Gemini·네이버 AI 브리핑에 물어보기</li>
-        </ul>
-      </div>
-      <dl class="prog__meta"><div><dt>추천 대상</dt><dd>마케팅·홍보·브랜드팀, 경영진·임원</dd></div><div><dt>형식</dt><dd>특강 90~120분 · 진단 실습 워크숍</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">GEO·AEO</span><span class="chip">AI 에이전트</span><span class="chip">AI 검색</span></dd></div></dl>
-    </article>
-
-    <article class="card prog rv" id="lec-yodel">
-      <div>
-        <div class="prog__top"><span class="prog__no">교양</span></div>
-        <h3 class="prog__label">요들송 기초와 이해</h3>
-        <p class="prog__sub">요들의 역사와 발성 원리부터 함께 부르는 한 소절까지</p>
-        <ul class="curr">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>요들은 어디서 왔나: 알프스 목동의 신호에서 웨스턴 요들, 2025년 유네스코 인류무형문화유산에 오른 스위스 요들까지</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>목소리는 두 개다: 낮은 흉성과 높은 두성(가성) 사이에서 소리가 '꺾이는' 원리</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>꺾임을 받치는 숨: 복식 호흡과 공명으로 음정을 안정시키는 기초 발성</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>실습: '오'와 '이'를 오가며 꺾어 보고, '아름다운 스위스 아가씨' 한 소절을 메아리처럼 주고받기</li>
-        </ul>
-      </div>
-      <dl class="prog__meta"><div><dt>추천 대상</dt><dd>기업 임직원(조직 활성화·워크숍), 공공기관, 대학(원)생</dd></div><div><dt>형식</dt><dd>교양 특강 60~90분 · 함께 불러 보는 실습</dd></div><div><dt>키워드</dt><dd class="chips"><span class="chip">요들</span><span class="chip">발성</span><span class="chip">아이스브레이킹</span></dd></div></dl>
-    </article>
-    </div>
-  </section>
-</div>
 </main>
 
 <footer class="foot is-dark">
   <div class="wrap">
     <div>
       <a class="logo" href="#home"><img class="logo__mark" src="assets/img/avatar.webp" alt="" width="38" height="38" loading="lazy"><span class="logo__name"><b>이홍연</b><small>HONGYEON LEE</small></span></a>
-      <p>AI-Native 콘텐츠 디렉터 · MC · 기업 강사</p>
+      <p>AI-Native 콘텐츠 디렉터 · MC · 미디어/플랫폼산업 연구</p>
     </div>
     <nav aria-label="하단 메뉴">
       <a href="#pd">방송 MC·디렉터</a><a href="#chainshift">AI-Native 제작자</a><a href="#yodel">개척형 크리에이터</a>
       <a href="#marketing">콘텐츠 마케터</a><a href="#ict">ICT 컨설턴트</a><a href="#yonsei">연세대 정보대학원</a>
-      <a href="#lectures">강의 콘텐츠</a>
     </nav>
     <div class="foot__contact"><a class="foot__mail" href="tel:01073681377">010-7368-1377</a><a class="foot__mail" href="mailto:leemedialab@gmail.com">leemedialab@gmail.com</a></div>
     <button class="foot__theme" id="themeBtn2" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 2.75a7.25 7.25 0 0 1 0 14.5z" fill="currentColor"/></svg>밝은 화면 · 어두운 화면 전환</button>
@@ -2505,12 +2212,6 @@ h1[tabindex="-1"]:focus{outline:none}
   if('scrollRestoration' in history)history.scrollRestoration='manual';
   window.addEventListener('load',function(){var h=location.hash.slice(1),el=h&&document.getElementById(h);
     if(!el||el.classList.contains('view'))window.scrollTo(0,0)});
-
-  // lecture rail arrows
-  var rail=document.getElementById('rail');
-  function railBy(dir){var c=rail.querySelector('.lcard');rail.scrollBy({left:dir*((c?c.getBoundingClientRect().width:300)+16),behavior:reduce?'auto':'smooth'})}
-  document.getElementById('railPrev').addEventListener('click',function(){railBy(-1)});
-  document.getElementById('railNext').addEventListener('click',function(){railBy(1)});
 
   // copy buttons: copy the value, or select the visible text when the clipboard is refused
   document.addEventListener('click',function(e){
